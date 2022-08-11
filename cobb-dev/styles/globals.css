@@ -1,0 +1,31 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, DoHyeon, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+@font-face {
+  font-family: 'DoHyeon';
+  src: url('/fonts/DoHyeon-Regular.ttf') format('truetype');
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
