@@ -1,7 +1,5 @@
-import React from 'react';
-
 const carry = () => {
-  return <div>hello</div>;
-};
+  return <div>hello</div>
+}
 
-export default carry;
+export default carry

@@ -1,3 +1,5 @@
+@use '/_Global/_color.scss';
+
 html,
 body {
   padding: 0;
@@ -6,8 +8,18 @@ body {
   letter-spacing: 0.5px;
 }
 
+body[data-theme='light'] {
+  --color-bg: #f3f4f8;
+  --color-font: #2c2c2e;
+}
+
+body[data-theme='dark'] {
+  --color-bg: #2c2c2e;
+  --color-font: #f3f4f8;
+}
+
 @font-face {
-  font-family: 'DoHyeon';
+  font-family: DoHyeon;
   src: url('/fonts/DoHyeon-Regular.ttf') format('truetype');
 }
 
@@ -18,14 +30,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
