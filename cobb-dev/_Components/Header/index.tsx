@@ -1,7 +1,8 @@
-import styles from './header.module.scss'
 import ThemeToggle from '_Components/ThemeToggle'
 
-const Header = () => {
+import styles from './header.module.scss'
+
+function Header() {
   return (
     <header className={styles.globalHeader}>
       This Is Global Header
