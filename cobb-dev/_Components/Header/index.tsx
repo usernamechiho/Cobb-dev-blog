@@ -1,5 +1,4 @@
 import ThemeToggle from '_Components/ThemeToggle'
-
 import styles from './header.module.scss'
 
 function Header() {

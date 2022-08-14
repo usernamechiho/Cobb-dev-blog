@@ -1,22 +1,24 @@
 import { useState } from 'react'
 
+import DayIcon from 'public/svgs/light.svg'
+import NightIcon from 'public/svgs/dark.svg'
+import classnames from 'classnames'
 import styles from './themeToggle.module.scss'
 
 function ThemeToggle() {
-  const [isTheme, setIsTheme] = useState<'light' | 'dark'>('light')
+  const [isLight, setIsLight] = useState<boolean>(true)
 
-  const handleToggleState = () => {
-    if (isTheme === 'light') setIsTheme('dark')
-    else setIsTheme('light')
-  }
+  const handleChangeTheme = () => setIsLight((prev) => !prev)
 
   return (
-    <>
-      <button type='button' className={isTheme === 'light' ? styles.light : styles.dark} onClick={handleToggleState}>
-        hi
-      </button>
-      <input />
-    </>
+    <button
+      type='button'
+      onClick={handleChangeTheme}
+      className={classnames(styles.toggleButton, { [styles.lightMode]: isLight })}
+    >
+      {isLight && <DayIcon />}
+      {!isLight && <NightIcon className={styles.nightIcon} />}
+    </button>
   )
 }
 
