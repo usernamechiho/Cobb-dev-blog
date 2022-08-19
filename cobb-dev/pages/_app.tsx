@@ -3,11 +3,13 @@ import { RecoilRoot } from 'recoil'
 import type { AppProps } from 'next/app'
 import Layout from '_Components/Layout'
 import Header from '_Components/Header'
+import ProgressBar from '_Components/ProgressBar'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
       <Header />
+      <ProgressBar />
       <Layout>
         <Component {...pageProps} />
       </Layout>

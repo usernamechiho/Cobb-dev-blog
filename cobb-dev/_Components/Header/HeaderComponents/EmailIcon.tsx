@@ -7,9 +7,9 @@ function EmailIcon() {
   return (
     <MenuItem>
       <ListItemIcon>
-        <AttachEmailIcon fontSize='medium' />
+        <AttachEmailIcon fontSize='medium' style={{ color: 'black' }} />
       </ListItemIcon>
-      <ListItemText>이메일 전송</ListItemText>
+      <ListItemText style={{ color: '#666666' }}>이메일 전송</ListItemText>
     </MenuItem>
   )
 }

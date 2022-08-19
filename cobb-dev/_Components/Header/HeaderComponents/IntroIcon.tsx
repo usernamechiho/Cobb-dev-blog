@@ -7,9 +7,9 @@ function IntroIcon() {
   return (
     <MenuItem>
       <ListItemIcon>
-        <FaceIcon fontSize='medium' />
+        <FaceIcon fontSize='medium' style={{ color: 'black' }} />
       </ListItemIcon>
-      <ListItemText>주인 소개</ListItemText>
+      <ListItemText style={{ color: '#666666' }}>주인 소개</ListItemText>
     </MenuItem>
   )
 }

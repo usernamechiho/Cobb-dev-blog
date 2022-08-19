@@ -7,9 +7,9 @@ function BlogIntroIcon() {
   return (
     <MenuItem>
       <ListItemIcon>
-        <FeedIcon fontSize='medium' />
+        <FeedIcon fontSize='medium' style={{ color: 'black' }} />
       </ListItemIcon>
-      <ListItemText>블로그 소개</ListItemText>
+      <ListItemText style={{ color: '#666666' }}>블로그 소개</ListItemText>
     </MenuItem>
   )
 }
