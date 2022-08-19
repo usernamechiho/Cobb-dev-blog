@@ -6,14 +6,12 @@ import Header from '_Components/Header'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <RecoilRoot>
-        <Header />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </RecoilRoot>
-    </>
+    <RecoilRoot>
+      <Header />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </RecoilRoot>
   )
 }
 

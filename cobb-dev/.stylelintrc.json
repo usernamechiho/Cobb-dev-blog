@@ -32,7 +32,7 @@
       }
     ],
     "scale-unlimited/declaration-strict-value": [
-      ["/color$/", "font-size"],
+      ["/color$/"],
       {
         "ignoreValues": ["inherit", "initial"]
       }

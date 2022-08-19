@@ -1,2 +1,34 @@
 @use 'styles/_Global/color.scss';
 @use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+.headerComponent {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  background: color.$WHITE;
+  border-bottom: 1px solid color.$SILVER_BORDER;
+}
+
+.headerNavSection {
+  display: none;
+
+  @include responsive.after(ML) {
+    display: flex;
+  }
+}
+
+.hamburgerIcon {
+  @include responsive.after(ML) {
+    display: none;
+  }
+}
+
+.menuSelectBox {
+  position: absolute;
+  top: 70px;
+  right: 0;
+}

@@ -4,7 +4,7 @@ interface IChildrenType {
   children: JSX.Element
 }
 
-const Layout = ({ children }: IChildrenType) => {
+function Layout({ children }: IChildrenType) {
   return <main className={styles.globalLayout}>{children}</main>
 }
 

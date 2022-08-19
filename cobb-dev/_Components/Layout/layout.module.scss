@@ -1,6 +1,9 @@
+@use 'styles/_Global/color.scss';
+
 .globalLayout {
   width: 100%;
   height: 100vh;
   padding: 90px 20px 20px;
   overflow-y: scroll;
+  background: color.$MAIN_LAYOUT_BACKGROUND;
 }
