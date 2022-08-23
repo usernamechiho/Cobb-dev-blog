@@ -31,15 +31,15 @@ const INFORMATION = [
   },
   {
     icon: <GitHubIcon style={{ color: 'white' }} fontSize='medium' />,
-    desc: '구직 중',
+    desc: '깃허브 방문하기',
   },
 ]
 
 function OwnerDesc() {
   return (
-    <>
+    <div className={styles.ownerDescContainer}>
       <div>
-        <Image src='/imgs/chiho.JPG' width={300} height={350} />
+        <Image src='/imgs/chiho.JPG' width={300} height={330} />
       </div>
       <div className={styles.introDesc}>
         <Typography variant='h5'>주인 소개</Typography>
@@ -51,12 +51,12 @@ function OwnerDesc() {
                 <ListItemText primary={`${info.desc}`} />
               </ListItem>
 
-              <Divider style={{ backgroundColor: 'white' }} />
+              <Divider className={styles.divider} />
             </>
           ))}
         </List>
       </div>
-    </>
+    </div>
   )
 }
 

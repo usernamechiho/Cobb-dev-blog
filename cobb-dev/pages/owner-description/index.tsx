@@ -1,4 +1,3 @@
-import Typewriter from 'typewriter-effect'
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined'
 import CodeIcon from '@mui/icons-material/Code'
 import CodeOffIcon from '@mui/icons-material/CodeOff'
@@ -14,35 +13,19 @@ const owner_description = () => {
       <section className={styles.stepperContainer}>
         <DailyStepper />
       </section>
-      <section className={styles.mainTypography}>
-        <h1>
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .typeString('It depends.')
-                .pauseFor(3500)
-                .deleteAll()
-                .pauseFor(3000)
-                .typeString('It happens.')
-                .pauseFor(3500)
-                .deleteAll()
-                .start()
-            }}
-            options={{ loop: true }}
-          />
-        </h1>
+
+      <section className={styles.ownerAndEducation}>
+        <div>
+          <OwnerDesc />
+        </div>
+
+        <div className={styles.educationIconBox}>
+          <SchoolOutlinedIcon className={styles.educationIcon} />
+          <EducationDesc />
+        </div>
       </section>
 
-      <section className={styles.imageDesc}>
-        <OwnerDesc />
-      </section>
-
-      <section>
-        <SchoolOutlinedIcon className={styles.educationIcon} />
-        <EducationDesc />
-      </section>
-
-      <section>
+      <section className={styles.techStacksBox}>
         <CodeIcon className={styles.codeIcon} />
         <CodeOffIcon className={styles.codeOffIcon} />
         <TechStacks />

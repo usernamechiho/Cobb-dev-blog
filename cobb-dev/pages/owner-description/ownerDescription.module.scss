@@ -14,25 +14,12 @@
   width: 100%;
 }
 
-.mainTypography {
-  display: flex;
-
-  h1 {
-    margin: 0 auto;
-    font-size: 50px;
-  }
-}
-
-.imageDesc {
+.ownerAndEducation {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  background: #1b1b1b;
-  border-radius: 10px;
 
   @include responsive.after(MD) {
     flex-direction: row;
-    width: 42%;
   }
 }
 
@@ -41,8 +28,19 @@
   color: color.$GRAY6;
 }
 
-.codeIcon,
-.codeOffIcon {
-  font-size: 50px;
-  color: color.$GRAY6;
+.educationIconBox {
+  margin-top: 20px;
+  @include responsive.after(MD) {
+    margin-top: 105px;
+  }
+}
+
+.techStacksBox {
+  margin-top: 50px;
+
+  .codeIcon,
+  .codeOffIcon {
+    font-size: 50px;
+    color: color.$GRAY6;
+  }
 }

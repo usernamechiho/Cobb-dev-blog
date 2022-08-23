@@ -6,7 +6,7 @@
   min-width: 350px;
 
   @include responsive.after(MD) {
-    width: 800px;
+    width: 600px;
   }
 }
 
