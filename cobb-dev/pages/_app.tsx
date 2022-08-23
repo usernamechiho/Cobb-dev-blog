@@ -8,8 +8,8 @@ import ProgressBar from '_Components/ProgressBar'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
-      <Header />
       <ProgressBar />
+      <Header />
       <Layout>
         <Component {...pageProps} />
       </Layout>

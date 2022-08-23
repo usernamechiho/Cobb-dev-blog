@@ -16,13 +16,27 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-props-no-spreading": "off",
     "semi": ["error", "never"],
     "jsx-quotes": [2, "prefer-single"],
     "import/no-unresolved": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "no-unused-vars": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "camelcase": "off",
+    "arrow-body-style": "off",
+    "newline-per-chained-call": "off",
+    "import/extensions": [
+      "off",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
   "overrides": [
     {

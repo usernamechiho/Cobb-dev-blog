@@ -21,7 +21,7 @@ function Header() {
   return (
     <header className={styles.headerComponent}>
       <Typography variant='h5' component='div' sx={{ flexGrow: 1 }}>
-        Cobb-dev
+        on & off
       </Typography>
       <nav className={styles.headerNavSection}>
         <IntroIcon />
