@@ -1,0 +1,17 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+.techStacksContainer {
+  min-width: 350px;
+
+  @include responsive.after(MD) {
+    width: 800px;
+  }
+}
+
+.listContainer {
+  @include responsive.after(MD) {
+    display: flex;
+  }
+}

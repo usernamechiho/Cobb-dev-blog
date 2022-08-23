@@ -1,0 +1,15 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+.introDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  @include responsive.after(MD) {
+    margin-top: 0;
+    margin-left: 50px;
+  }
+}

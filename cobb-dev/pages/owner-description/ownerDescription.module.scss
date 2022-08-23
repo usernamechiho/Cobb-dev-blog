@@ -36,26 +36,13 @@
   }
 }
 
-.introDesc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 20px;
-
-  @include responsive.after(MD) {
-    margin-top: 0;
-    margin-left: 50px;
-  }
-}
-
 .educationIcon {
   font-size: 50px;
   color: color.$GRAY6;
 }
 
-.schoolBox {
-  width: 350px;
-  height: auto;
-  background: #1b1b1b;
-  border-radius: 10px;
+.codeIcon,
+.codeOffIcon {
+  font-size: 50px;
+  color: color.$GRAY6;
 }
