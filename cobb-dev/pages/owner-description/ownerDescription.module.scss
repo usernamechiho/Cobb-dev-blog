@@ -6,6 +6,7 @@
   @include flexbox.flexbox(start, center);
   flex-direction: column;
   height: 100%;
+  overflow-y: scroll;
   color: color.$WHITE;
   background: color.$BLACK_BACKGROUND;
 }
@@ -17,9 +18,11 @@
 .ownerAndEducation {
   display: flex;
   flex-direction: column;
+  animation: smoothLeftAppear 2s;
 
   @include responsive.after(MD) {
     flex-direction: row;
+    margin-top: 20px;
   }
 }
 
@@ -29,18 +32,47 @@
 }
 
 .educationIconBox {
-  margin-top: 20px;
+  margin-top: 30px;
   @include responsive.after(MD) {
     margin-top: 105px;
   }
 }
 
 .techStacksBox {
-  margin-top: 50px;
+  margin: 50px 0;
+  animation: smoothRightAppear 2s;
 
   .codeIcon,
   .codeOffIcon {
     font-size: 50px;
     color: color.$GRAY6;
+  }
+}
+
+@keyframes smoothLeftAppear {
+  from {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(5%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes smoothRightAppear {
+  from {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(-5%);
+  }
+
+  to {
+    transform: translateX(0%);
   }
 }

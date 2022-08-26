@@ -1,0 +1,17 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+.blogDescContainer {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  color: color.$WHITE;
+  background: color.$BLACK_BACKGROUND;
+}
+
+.typewriterSection {
+  h1 {
+    font-size: 80px;
+  }
+}

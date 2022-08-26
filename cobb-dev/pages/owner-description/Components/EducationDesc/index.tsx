@@ -7,7 +7,7 @@ import styles from './educationDesc.module.scss'
 
 const EDUCATIONS = [
   {
-    institution: "The King's Academy",
+    institution: "The King's Academy (USA)",
     src: '/imgs/TKA.png',
   },
   {

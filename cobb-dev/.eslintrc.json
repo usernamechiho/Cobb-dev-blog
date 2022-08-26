@@ -27,6 +27,14 @@
     "camelcase": "off",
     "arrow-body-style": "off",
     "newline-per-chained-call": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
     "import/extensions": [
       "off",
       "ignorePackages",
