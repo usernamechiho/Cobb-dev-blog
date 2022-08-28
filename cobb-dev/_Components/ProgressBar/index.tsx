@@ -10,6 +10,7 @@ function ProgressBar() {
 
     if (scrollTop === 0) {
       setProgressWidth(0)
+      return
     }
 
     const windowHeight = scrollHeight - clientHeight

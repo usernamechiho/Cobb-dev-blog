@@ -2,6 +2,7 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
+import React from 'react'
 
 import styles from './blogTechStacks.module.scss'
 
@@ -36,7 +37,7 @@ function BlogTechStacks() {
     <div className={styles.blogTechContainer}>
       <Card sx={{ width: '300px', height: '530px' }}>
         {FRONT_STACKS.map((stack) => (
-          <>
+          <React.Fragment key={stack.desc}>
             <CardMedia
               component='img'
               alt={`${stack.tech}`}
@@ -55,13 +56,13 @@ function BlogTechStacks() {
                 {stack.desc}
               </Typography>
             </CardContent>
-          </>
+          </React.Fragment>
         ))}
       </Card>
 
       <Card className={styles.backCards}>
         {BACK_STACKS.map((stack) => (
-          <>
+          <React.Fragment key={stack.desc}>
             <CardMedia component='img' alt={`${stack.tech}`} height='120' image={`${stack.src}`} />
             <CardContent>
               <Typography gutterBottom variant='h5' component='div'>
@@ -71,7 +72,7 @@ function BlogTechStacks() {
                 {stack.desc}
               </Typography>
             </CardContent>
-          </>
+          </React.Fragment>
         ))}
       </Card>
     </div>

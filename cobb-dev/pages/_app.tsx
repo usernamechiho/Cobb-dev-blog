@@ -34,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {isLoading && <Loading />}
       <ProgressBar />
       <Header />
+
       <Layout>
         <Component {...pageProps} />
       </Layout>
