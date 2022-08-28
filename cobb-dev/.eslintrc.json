@@ -17,6 +17,8 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/jsx-props-no-spreading": "off",
+    "react/no-unescaped-entities": "off",
+    "react/self-closing-comp": "warn",
     "semi": ["error", "never"],
     "jsx-quotes": [2, "prefer-single"],
     "import/no-unresolved": "off",
