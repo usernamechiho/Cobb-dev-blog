@@ -1,6 +1,7 @@
 import Typewriter from 'typewriter-effect'
 import desktop from 'public/imgs/desktop.png'
 import mobile from 'public/imgs/mobile.png'
+import BlogTechStacks from './Components/BlogTechStacks'
 import styles from './blogDesc.module.scss'
 
 const blog_description = () => {
@@ -42,11 +43,17 @@ const blog_description = () => {
           이펙트를 관리하는 데 있어 원론의 중요성을 느끼고, 기록의 중요성을 느꼈습니다.
         </p>
         <p>
-
+          개인적으론 라이브러리를 적극적으로 사용해보고 나중에 참고할 수 있을 만한 후기를 많이 남기고 싶습니다. 프로젝트
+          레벨에서 라이브러리의 용이함과 성능에 대해 고민이 많았었습니다. 저와 비슷한 고민이 있는 개발자들에게 도움이
+          되는 글을 작성하고 싶습니다.
         </p>
       </section>
+      <section className={styles.blogStacks}>
+        <h1>🚀 개발 환경</h1>
+        <BlogTechStacks />
+      </section>
       <div className={styles.recommendedDevice}>
-        <h1>✔️ 추천 디바이스 환경</h1>
+        <h1>💻 추천 디바이스 환경</h1>
       </div>
       <section className={styles.iphoneImageContainer}>
         <img
@@ -73,6 +80,14 @@ const blog_description = () => {
             backgroundImage: `url(${mobile.src})`,
           }}
         />
+      </section>
+      <section className={styles.blogProblem}>
+        <h1>💬 블로그 문제점 / 개선점</h1>
+        <p>
+          블로그 이용에 문제가 있거나 개선점을 발견하시면 이메일 부탁드리겠습니다. 해당 블로그의 Github Repo PR, issue도
+          감사히 받겠습니다.
+        </p>
+        <p>아직 모르는 게 많습니다. 알려주시면 고치겠습니다. </p>
       </section>
     </main>
   )

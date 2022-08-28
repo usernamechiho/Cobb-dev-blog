@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef, MouseEvent } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import styles from './progressBar.module.scss'
 
 function ProgressBar() {

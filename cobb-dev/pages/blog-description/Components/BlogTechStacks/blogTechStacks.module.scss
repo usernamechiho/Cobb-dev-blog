@@ -1,0 +1,20 @@
+@use 'styles/_Global/responsive.scss';
+
+.blogTechContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+
+  @include responsive.after(MD) {
+    flex-direction: row;
+  }
+}
+
+.backCards {
+  width: 300px;
+  height: 530px;
+
+  @include responsive.after(MD) {
+    margin-left: 20px;
+  }
+}
