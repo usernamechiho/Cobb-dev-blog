@@ -26,7 +26,7 @@ function TechStacks() {
     <div className={styles.techStacksContainer}>
       <List className={styles.listContainer}>
         {STACKS.map((stack) => (
-          <ListItem>
+          <ListItem key={stack.tech}>
             <ListItemAvatar>
               <Avatar src={`${stack.src}`} sx={{ width: 50, height: 50, borderRadius: 3 }} variant='square' />
             </ListItemAvatar>

@@ -25,7 +25,7 @@ function EducationDesc() {
     <div className={styles.schoolBox}>
       <List>
         {EDUCATIONS.map((edu) => (
-          <ListItem>
+          <ListItem key={edu.institution}>
             <ListItemAvatar>
               <Avatar src={`${edu.src}`} sx={{ width: 50, height: 50 }} />
             </ListItemAvatar>

@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography'
 import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined'
+import React from 'react'
 import styles from './ownerDesc.module.scss'
 
 const INFORMATION = [
@@ -45,14 +46,14 @@ function OwnerDesc() {
         <Typography variant='h5'>주인 소개</Typography>
         <List>
           {INFORMATION.map((info) => (
-            <>
+            <React.Fragment key={info.desc}>
               <ListItem>
                 <ListItemIcon>{info.icon}</ListItemIcon>
                 <ListItemText primary={`${info.desc}`} />
               </ListItem>
 
               <Divider className={styles.divider} />
-            </>
+            </React.Fragment>
           ))}
         </List>
       </div>

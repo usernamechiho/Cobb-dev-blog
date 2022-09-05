@@ -5,6 +5,7 @@ import Layout from '_Components/Layout'
 import Header from '_Components/Header'
 import ProgressBar from '_Components/ProgressBar'
 import Loading from '_Components/Loading'
+import Modal from '_Components/Modal'
 
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -15,8 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-    const handleLoadingStart = (url: any) => url !== router.asPath && setIsLoading(true)
-    const handleLoadingComplete = (url: any) => url === router.asPath && setIsLoading(false)
+    const handleLoadingStart = (url: string) => url !== router.asPath && setIsLoading(true)
+    const handleLoadingComplete = (url: string) => url === router.asPath && setIsLoading(false)
 
     router.events.on('routeChangeStart', handleLoadingStart)
     router.events.on('routeChangeComplete', handleLoadingComplete)
@@ -31,10 +32,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <RecoilRoot>
-      {isLoading && <Loading />}
+      {isLoading && (
+        <Modal>
+          <Loading />
+        </Modal>
+      )}
       <ProgressBar />
       <Header />
-
       <Layout>
         <Component {...pageProps} />
       </Layout>
