@@ -10,8 +10,7 @@ import IntroIcon from '_Components/Header/HeaderComponents/IntroIcon'
 import BlogIntroIcon from '_Components/Header/HeaderComponents/BlogIntroIcon'
 import EmailIcon from '_Components/Header/HeaderComponents/EmailIcon'
 import ClickAwayListener from '@mui/material/ClickAwayListener'
-import { isEmailModal } from 'Atoms/atom'
-import { useRecoilValue } from 'recoil'
+import Modal from '_Components/Modal'
 import EmailModal from './HeaderComponents/EmailModal'
 import styles from './header.module.scss'
 
@@ -21,47 +20,41 @@ function Header() {
   const handleOpenMenu = () => setIsMenu((prev) => !prev)
   const handleClickAway = () => setIsMenu(false)
 
-  const isEmailModalOpen = useRecoilValue(isEmailModal)
-
   return (
-    <>
-      <header className={styles.headerComponent}>
-        <Typography variant='h5' component='div' sx={{ flexGrow: 1 }}>
-          Cobb-dev
-        </Typography>
-        <nav className={styles.headerNavSection}>
-          <IntroIcon />
-          <BlogIntroIcon />
-          <EmailIcon />
-        </nav>
-        <IconButton
-          edge='start'
-          color='default'
-          aria-label='menu'
-          onClick={handleOpenMenu}
-          className={styles.hamburgerIcon}
-        >
-          <MenuIcon style={{ fontSize: 35 }} />
-        </IconButton>
+    <header className={styles.headerComponent}>
+      <Typography variant='h5' component='div' sx={{ flexGrow: 1 }}>
+        Cobb-dev
+      </Typography>
+      <nav className={styles.headerNavSection}>
+        <IntroIcon />
+        <BlogIntroIcon />
+        <EmailIcon />
+      </nav>
+      <IconButton
+        edge='start'
+        color='default'
+        aria-label='menu'
+        onClick={handleOpenMenu}
+        className={styles.hamburgerIcon}
+      >
+        <MenuIcon style={{ fontSize: 35 }} />
+      </IconButton>
 
-        {isMenu && (
-          <ClickAwayListener onClickAway={handleClickAway}>
-            <div className={styles.menuSelectBox}>
-              <Paper sx={{ width: 200 }}>
-                <MenuList>
-                  <IntroIcon />
-                  <BlogIntroIcon />
-                  <Divider />
-                  <EmailIcon />
-                </MenuList>
-              </Paper>
-            </div>
-          </ClickAwayListener>
-        )}
-      </header>
-
-      {isEmailModalOpen && <EmailModal />}
-    </>
+      {isMenu && (
+        <ClickAwayListener onClickAway={handleClickAway}>
+          <div className={styles.menuSelectBox}>
+            <Paper sx={{ width: 200 }}>
+              <MenuList>
+                <IntroIcon />
+                <BlogIntroIcon />
+                <Divider />
+                <EmailIcon />
+              </MenuList>
+            </Paper>
+          </div>
+        </ClickAwayListener>
+      )}
+    </header>
   )
 }
 

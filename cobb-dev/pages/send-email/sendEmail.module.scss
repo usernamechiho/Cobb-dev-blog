@@ -2,6 +2,10 @@
 @use 'styles/_Global/flexbox.scss';
 @use 'styles/_Global/responsive.scss';
 
+.emailContainer {
+  height: calc(100vh - 70px);
+}
+
 .emailModalContainer {
   width: 200px;
   height: 200px;
@@ -15,7 +19,6 @@
 
 .modalHeader {
   @include flexbox.flexbox(start, center);
-  justify-content: space-between;
   width: 100%;
   height: 50px;
   padding: 0 10px;

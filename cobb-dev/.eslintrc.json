@@ -19,6 +19,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/no-unescaped-entities": "off",
     "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
     "react/self-closing-comp": "warn",
     "semi": ["error", "never"],
     "jsx-quotes": [2, "prefer-single"],
@@ -30,6 +31,7 @@
     "camelcase": "off",
     "arrow-body-style": "off",
     "newline-per-chained-call": "off",
+    "comma-dangle": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
