@@ -10,8 +10,6 @@ import IntroIcon from '_Components/Header/HeaderComponents/IntroIcon'
 import BlogIntroIcon from '_Components/Header/HeaderComponents/BlogIntroIcon'
 import EmailIcon from '_Components/Header/HeaderComponents/EmailIcon'
 import ClickAwayListener from '@mui/material/ClickAwayListener'
-import Modal from '_Components/Modal'
-import EmailModal from './HeaderComponents/EmailModal'
 import styles from './header.module.scss'
 
 function Header() {

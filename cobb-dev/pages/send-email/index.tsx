@@ -1,11 +1,14 @@
 import Paper from '@mui/material/Paper'
 import SendRoundedIcon from '@mui/icons-material/SendRounded'
-import CloseIconButton from '_Components/IconButton/CloseIconButton'
 import emailjs from '@emailjs/browser'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+import wind from 'public/imgs/wind.png'
 import styles from './sendEmail.module.scss'
 
-function send_email() {
+const send_email = () => {
+  const [emailFrom, setEmailFrom] = useState('')
+  const [title, setTitle] = useState('')
+  const [message, setMessage] = useState('')
   const form: any = useRef()
 
   const sendEmail = (e: any) => {
@@ -55,6 +58,16 @@ function send_email() {
           <input type='submit' value='send' />
         </form>
       </Paper>
+      <div
+        style={{
+          backgroundImage: `url(${wind.src})`,
+          width: '250px',
+          height: '250px',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'contain'
+        }}
+      />
     </div>
   )
 }
