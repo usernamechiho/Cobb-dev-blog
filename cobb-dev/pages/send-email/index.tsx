@@ -65,7 +65,7 @@ const send_email = () => {
           height: '250px',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain'
+          backgroundSize: 'contain',
         }}
       />
     </div>
