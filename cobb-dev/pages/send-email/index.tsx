@@ -1,19 +1,17 @@
 import Paper from '@mui/material/Paper';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import wind from 'public/imgs/wind.png';
 import styles from './sendEmail.module.scss';
 
-const send_email = () => {
+function Send_email() {
   const [email, setEmail] = useState('');
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
-  const form: any = useRef();
 
-  const sendEmail = (e: any) => {
+  const handleSubmitEmail = (e: any) => {
     e.preventDefault();
-
     emailjs
       .send(
         'service_4mquxy2',
@@ -38,25 +36,6 @@ const send_email = () => {
             Email to iamchho1@gmail.com
           </div>
         </header>
-
-        <form ref={form} onSubmit={sendEmail}>
-          <label htmlFor='user_name'>
-            <span>Name</span>
-            <input type='text' name='user_name' />
-          </label>
-
-          <label htmlFor='email_subject'>
-            <span>Email</span>
-            <input type='email' name='user_email' />
-          </label>
-
-          <label htmlFor='message'>
-            <span>Message</span>
-            <textarea name='message' />
-          </label>
-
-          <input type='submit' value='send' />
-        </form>
       </Paper>
       <div
         style={{
@@ -70,6 +49,6 @@ const send_email = () => {
       />
     </div>
   );
-};
+}
 
-export default send_email;
+export default Send_email;

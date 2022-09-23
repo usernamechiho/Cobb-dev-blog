@@ -18,6 +18,7 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/jsx-props-no-spreading": "off",
     "react/no-unescaped-entities": "off",
+    "react/jsx-pascal-case": "off",
     "import/prefer-default-export": "off",
     "react/require-default-props": "off",
     "react/self-closing-comp": "warn",
