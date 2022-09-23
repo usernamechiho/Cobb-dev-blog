@@ -18,7 +18,6 @@
 .ownerAndEducation {
   display: flex;
   flex-direction: column;
-  animation: smoothLeftAppear 2s;
 
   @include responsive.after(MD) {
     flex-direction: row;
@@ -40,39 +39,10 @@
 
 .techStacksBox {
   margin: 50px 0;
-  animation: smoothRightAppear 2s;
 
   .codeIcon,
   .codeOffIcon {
     font-size: 50px;
     color: color.$GRAY6;
-  }
-}
-
-@keyframes smoothLeftAppear {
-  from {
-    transform: translateX(-100%);
-  }
-
-  50% {
-    transform: translateX(5%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes smoothRightAppear {
-  from {
-    transform: translateX(100%);
-  }
-
-  50% {
-    transform: translateX(-5%);
-  }
-
-  to {
-    transform: translateX(0%);
   }
 }

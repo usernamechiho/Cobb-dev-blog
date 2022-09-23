@@ -19,7 +19,6 @@ const blog_description = () => {
       </motion.div>
       <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
         <section className={styles.blogStacks}>
-          <h1>🚀 개발 환경</h1>
           <BlogTechStacks />
         </section>
       </motion.div>

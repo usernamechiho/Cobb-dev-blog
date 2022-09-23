@@ -34,48 +34,51 @@ const BACK_STACKS = [
 
 function BlogTechStacks() {
   return (
-    <div className={styles.blogTechContainer}>
-      <Card sx={{ width: '300px', height: '530px' }}>
-        {FRONT_STACKS.map((stack) => (
-          <React.Fragment key={stack.desc}>
-            <CardMedia
-              component='img'
-              alt={`${stack.tech}`}
-              height='100'
-              image={`${stack.src}`}
-              style={{
-                objectFit: 'contain',
-                marginTop: '30px',
-              }}
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='div'>
-                {stack.tech}
-              </Typography>
-              <Typography variant='body2' color='text.secondary'>
-                {stack.desc}
-              </Typography>
-            </CardContent>
-          </React.Fragment>
-        ))}
-      </Card>
+    <>
+      <h1>🚀 개발 환경</h1>
+      <div className={styles.blogTechContainer}>
+        <Card sx={{ width: '300px', height: '530px' }}>
+          {FRONT_STACKS.map((stack) => (
+            <React.Fragment key={stack.desc}>
+              <CardMedia
+                component='img'
+                alt={`${stack.tech}`}
+                height='100'
+                image={`${stack.src}`}
+                style={{
+                  objectFit: 'contain',
+                  marginTop: '30px',
+                }}
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='div'>
+                  {stack.tech}
+                </Typography>
+                <Typography variant='body2' color='text.secondary'>
+                  {stack.desc}
+                </Typography>
+              </CardContent>
+            </React.Fragment>
+          ))}
+        </Card>
 
-      <Card className={styles.backCards}>
-        {BACK_STACKS.map((stack) => (
-          <React.Fragment key={stack.desc}>
-            <CardMedia component='img' alt={`${stack.tech}`} height='120' image={`${stack.src}`} />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='div'>
-                {stack.tech}
-              </Typography>
-              <Typography variant='body2' color='text.secondary'>
-                {stack.desc}
-              </Typography>
-            </CardContent>
-          </React.Fragment>
-        ))}
-      </Card>
-    </div>
+        <Card className={styles.backCards}>
+          {BACK_STACKS.map((stack) => (
+            <React.Fragment key={stack.desc}>
+              <CardMedia component='img' alt={`${stack.tech}`} height='120' image={`${stack.src}`} />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='div'>
+                  {stack.tech}
+                </Typography>
+                <Typography variant='body2' color='text.secondary'>
+                  {stack.desc}
+                </Typography>
+              </CardContent>
+            </React.Fragment>
+          ))}
+        </Card>
+      </div>
+    </>
   );
 }
 
