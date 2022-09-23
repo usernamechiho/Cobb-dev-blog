@@ -21,7 +21,6 @@
     "import/prefer-default-export": "off",
     "react/require-default-props": "off",
     "react/self-closing-comp": "warn",
-    "semi": ["error", "never"],
     "jsx-quotes": [2, "prefer-single"],
     "import/no-unresolved": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -31,6 +30,7 @@
     "camelcase": "off",
     "arrow-body-style": "off",
     "newline-per-chained-call": "off",
+    "max-len": "off",
     "comma-dangle": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",

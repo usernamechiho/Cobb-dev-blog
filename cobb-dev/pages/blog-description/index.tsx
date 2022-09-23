@@ -1,8 +1,9 @@
-import Typewriter from 'typewriter-effect'
-import desktop from 'public/imgs/desktop.png'
-import mobile from 'public/imgs/mobile.png'
-import BlogTechStacks from './Components/BlogTechStacks'
-import styles from './blogDesc.module.scss'
+import Typewriter from 'typewriter-effect';
+import desktop from 'public/imgs/desktop.png';
+import mobile from 'public/imgs/mobile.png';
+import { motion } from 'framer-motion';
+import BlogTechStacks from './Components/BlogTechStacks';
+import styles from './blogDesc.module.scss';
 
 const blog_description = () => {
   return (
@@ -33,7 +34,7 @@ const blog_description = () => {
                 .typeString('It happens.')
                 .pauseFor(3500)
                 .deleteAll()
-                .start()
+                .start();
             }}
             options={{ loop: true }}
           />
@@ -90,7 +91,7 @@ const blog_description = () => {
         <p>아직 모르는 게 많습니다. 알려주시면 고치겠습니다. </p>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default blog_description
+export default blog_description;

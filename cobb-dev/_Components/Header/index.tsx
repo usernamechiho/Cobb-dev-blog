@@ -1,22 +1,22 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import Typography from '@mui/material/Typography'
-import IconButton from '@mui/material/IconButton'
-import MenuIcon from '@mui/icons-material/Menu'
-import Divider from '@mui/material/Divider'
-import Paper from '@mui/material/Paper'
-import MenuList from '@mui/material/MenuList'
-import IntroIcon from '_Components/Header/HeaderComponents/IntroIcon'
-import BlogIntroIcon from '_Components/Header/HeaderComponents/BlogIntroIcon'
-import EmailIcon from '_Components/Header/HeaderComponents/EmailIcon'
-import ClickAwayListener from '@mui/material/ClickAwayListener'
-import styles from './header.module.scss'
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Divider from '@mui/material/Divider';
+import Paper from '@mui/material/Paper';
+import MenuList from '@mui/material/MenuList';
+import IntroIcon from '_Components/Header/HeaderComponents/IntroIcon';
+import BlogIntroIcon from '_Components/Header/HeaderComponents/BlogIntroIcon';
+import EmailIcon from '_Components/Header/HeaderComponents/EmailIcon';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import styles from './header.module.scss';
 
 function Header() {
-  const [isMenu, setIsMenu] = useState(false)
+  const [isMenu, setIsMenu] = useState(false);
 
-  const handleOpenMenu = () => setIsMenu((prev) => !prev)
-  const handleClickAway = () => setIsMenu(false)
+  const handleOpenMenu = () => setIsMenu((prev) => !prev);
+  const handleClickAway = () => setIsMenu(false);
 
   return (
     <header className={styles.headerComponent}>
@@ -53,7 +53,7 @@ function Header() {
         </ClickAwayListener>
       )}
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

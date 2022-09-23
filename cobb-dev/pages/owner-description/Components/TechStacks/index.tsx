@@ -1,10 +1,10 @@
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import ListItemText from '@mui/material/ListItemText'
-import Avatar from '@mui/material/Avatar'
-import ListItemAvatar from '@mui/material/ListItemAvatar'
-import styles from './techStacks.module.scss'
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Avatar from '@mui/material/Avatar';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import styles from './techStacks.module.scss';
 
 const STACKS = [
   {
@@ -19,7 +19,7 @@ const STACKS = [
     tech: 'NEXT.js',
     src: '/imgs/NEXT.png',
   },
-]
+];
 
 function TechStacks() {
   return (
@@ -35,7 +35,7 @@ function TechStacks() {
         ))}
       </List>
     </div>
-  )
+  );
 }
 
-export default TechStacks
+export default TechStacks;

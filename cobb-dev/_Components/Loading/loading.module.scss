@@ -3,8 +3,8 @@
 .spinner {
   width: 50px;
   height: 50px;
-  border: 8px solid;
-  border-color: color.$BLUE color.$TRANSPARENT;
+  border: 3px solid;
+  border-color: color.$GRAYA color.$TRANSPARENT;
   border-radius: 50%;
   animation: spin 0.5s linear infinite;
 }

@@ -1,8 +1,8 @@
-import IconButton from '@mui/material/IconButton'
-import CloseIcon from '@mui/icons-material/Close'
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 interface IHandlerPropsType {
-  handler?: () => void
+  handler?: () => void;
 }
 
 function CloseIconButton({ handler = () => {} }: IHandlerPropsType) {
@@ -10,7 +10,7 @@ function CloseIconButton({ handler = () => {} }: IHandlerPropsType) {
     <IconButton aria-label='close' onClick={handler}>
       <CloseIcon style={{ fontSize: '25px', color: 'white' }} />
     </IconButton>
-  )
+  );
 }
 
-export default CloseIconButton
+export default CloseIconButton;

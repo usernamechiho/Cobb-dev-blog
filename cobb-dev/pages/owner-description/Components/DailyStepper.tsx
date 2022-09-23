@@ -1,8 +1,8 @@
-import Stepper from '@mui/material/Stepper'
-import Step from '@mui/material/Step'
-import StepLabel from '@mui/material/StepLabel'
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
 
-const DAILY_STEP = ['기상', '코딩', '취침']
+const DAILY_STEP = ['기상', '코딩', '취침'];
 
 function DailyStepper() {
   return (
@@ -15,7 +15,7 @@ function DailyStepper() {
         </Step>
       ))}
     </Stepper>
-  )
+  );
 }
 
-export default DailyStepper
+export default DailyStepper;

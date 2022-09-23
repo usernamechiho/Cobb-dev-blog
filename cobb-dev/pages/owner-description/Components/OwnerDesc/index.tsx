@@ -1,17 +1,17 @@
-import Image from 'next/image'
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import ListItemText from '@mui/material/ListItemText'
-import FaceOutlinedIcon from '@mui/icons-material/FaceOutlined'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import Divider from '@mui/material/Divider'
-import Typography from '@mui/material/Typography'
-import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined'
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
-import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined'
-import React from 'react'
-import styles from './ownerDesc.module.scss'
+import Image from 'next/image';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import FaceOutlinedIcon from '@mui/icons-material/FaceOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
+import React from 'react';
+import styles from './ownerDesc.module.scss';
 
 const INFORMATION = [
   {
@@ -34,7 +34,7 @@ const INFORMATION = [
     icon: <GitHubIcon style={{ color: 'white' }} fontSize='medium' />,
     desc: '깃허브 방문하기',
   },
-]
+];
 
 function OwnerDesc() {
   return (
@@ -58,7 +58,7 @@ function OwnerDesc() {
         </List>
       </div>
     </div>
-  )
+  );
 }
 
-export default OwnerDesc
+export default OwnerDesc;

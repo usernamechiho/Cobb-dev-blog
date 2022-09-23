@@ -1,9 +1,9 @@
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemText from '@mui/material/ListItemText'
-import Avatar from '@mui/material/Avatar'
-import ListItemAvatar from '@mui/material/ListItemAvatar'
-import styles from './educationDesc.module.scss'
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Avatar from '@mui/material/Avatar';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import styles from './educationDesc.module.scss';
 
 const EDUCATIONS = [
   {
@@ -18,7 +18,7 @@ const EDUCATIONS = [
     institution: '서울과학기술대학교 영어영문학과',
     src: '/imgs/SNUST.png',
   },
-]
+];
 
 function EducationDesc() {
   return (
@@ -34,7 +34,7 @@ function EducationDesc() {
         ))}
       </List>
     </div>
-  )
+  );
 }
 
-export default EducationDesc
+export default EducationDesc;

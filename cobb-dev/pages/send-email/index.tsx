@@ -1,18 +1,18 @@
-import Paper from '@mui/material/Paper'
-import SendRoundedIcon from '@mui/icons-material/SendRounded'
-import emailjs from '@emailjs/browser'
-import { useRef, useState } from 'react'
-import wind from 'public/imgs/wind.png'
-import styles from './sendEmail.module.scss'
+import Paper from '@mui/material/Paper';
+import SendRoundedIcon from '@mui/icons-material/SendRounded';
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
+import wind from 'public/imgs/wind.png';
+import styles from './sendEmail.module.scss';
 
 const send_email = () => {
-  const [emailFrom, setEmailFrom] = useState('')
-  const [title, setTitle] = useState('')
-  const [message, setMessage] = useState('')
-  const form: any = useRef()
+  const [email, setEmail] = useState('');
+  const [title, setTitle] = useState('');
+  const [message, setMessage] = useState('');
+  const form: any = useRef();
 
   const sendEmail = (e: any) => {
-    e.preventDefault()
+    e.preventDefault();
 
     emailjs
       .send(
@@ -26,8 +26,8 @@ const send_email = () => {
         '16eWOhhsJIXcTkcm4'
       )
       .then((res) => console.log(res))
-      .catch((error) => console.log(error))
-  }
+      .catch((error) => console.log(error));
+  };
 
   return (
     <div className={styles.emailContainer}>
@@ -69,7 +69,7 @@ const send_email = () => {
         }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default send_email
+export default send_email;

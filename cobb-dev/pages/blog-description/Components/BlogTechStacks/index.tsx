@@ -1,10 +1,10 @@
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Typography from '@mui/material/Typography'
-import React from 'react'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import React from 'react';
 
-import styles from './blogTechStacks.module.scss'
+import styles from './blogTechStacks.module.scss';
 
 const FRONT_STACKS = [
   {
@@ -17,7 +17,7 @@ const FRONT_STACKS = [
     src: '/imgs/materialUI.png',
     desc: '디자인 라이브러리를 사용했습니다.',
   },
-]
+];
 
 const BACK_STACKS = [
   {
@@ -30,7 +30,7 @@ const BACK_STACKS = [
     src: '/imgs/mysql.png',
     desc: '관계형 데이터베이스 관리 시스템을 사용 중입니다.',
   },
-]
+];
 
 function BlogTechStacks() {
   return (
@@ -76,7 +76,7 @@ function BlogTechStacks() {
         ))}
       </Card>
     </div>
-  )
+  );
 }
 
-export default BlogTechStacks
+export default BlogTechStacks;

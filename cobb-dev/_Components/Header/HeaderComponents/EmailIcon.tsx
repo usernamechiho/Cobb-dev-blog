@@ -1,8 +1,8 @@
-import MenuItem from '@mui/material/MenuItem'
-import ListItemText from '@mui/material/ListItemText'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import AttachEmailIcon from '@mui/icons-material/AttachEmail'
-import Link from 'next/link'
+import MenuItem from '@mui/material/MenuItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import AttachEmailIcon from '@mui/icons-material/AttachEmail';
+import Link from 'next/link';
 
 function EmailIcon() {
   return (
@@ -16,7 +16,7 @@ function EmailIcon() {
         </MenuItem>
       </a>
     </Link>
-  )
+  );
 }
 
-export default EmailIcon
+export default EmailIcon;

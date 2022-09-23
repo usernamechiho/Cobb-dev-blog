@@ -1,8 +1,8 @@
-import MenuItem from '@mui/material/MenuItem'
-import ListItemText from '@mui/material/ListItemText'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import FaceIcon from '@mui/icons-material/Face'
-import Link from 'next/link'
+import MenuItem from '@mui/material/MenuItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import FaceIcon from '@mui/icons-material/Face';
+import Link from 'next/link';
 
 function IntroIcon() {
   return (
@@ -16,7 +16,7 @@ function IntroIcon() {
         </MenuItem>
       </a>
     </Link>
-  )
+  );
 }
 
-export default IntroIcon
+export default IntroIcon;

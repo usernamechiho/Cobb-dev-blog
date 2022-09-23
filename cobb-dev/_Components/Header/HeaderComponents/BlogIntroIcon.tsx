@@ -1,8 +1,8 @@
-import MenuItem from '@mui/material/MenuItem'
-import ListItemText from '@mui/material/ListItemText'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import FeedIcon from '@mui/icons-material/Feed'
-import Link from 'next/link'
+import MenuItem from '@mui/material/MenuItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import FeedIcon from '@mui/icons-material/Feed';
+import Link from 'next/link';
 
 function BlogIntroIcon() {
   return (
@@ -16,7 +16,7 @@ function BlogIntroIcon() {
         </MenuItem>
       </a>
     </Link>
-  )
+  );
 }
 
-export default BlogIntroIcon
+export default BlogIntroIcon;

@@ -1,11 +1,11 @@
-import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined'
-import CodeIcon from '@mui/icons-material/Code'
-import CodeOffIcon from '@mui/icons-material/CodeOff'
-import DailyStepper from './Components/DailyStepper'
-import styles from './ownerDescription.module.scss'
-import TechStacks from './Components/TechStacks'
-import OwnerDesc from './Components/OwnerDesc'
-import EducationDesc from './Components/EducationDesc'
+import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
+import CodeIcon from '@mui/icons-material/Code';
+import CodeOffIcon from '@mui/icons-material/CodeOff';
+import DailyStepper from './Components/DailyStepper';
+import styles from './ownerDescription.module.scss';
+import TechStacks from './Components/TechStacks';
+import OwnerDesc from './Components/OwnerDesc';
+import EducationDesc from './Components/EducationDesc';
 
 const owner_description = () => {
   return (
@@ -31,7 +31,7 @@ const owner_description = () => {
         <TechStacks />
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default owner_description
+export default owner_description;
