@@ -3,7 +3,8 @@
 @use 'styles/_Global/responsive.scss';
 
 .emailContainer {
-  height: calc(100vh - 70px);
+  height: calc(100% - 70px);
+  background: color.$BLACK_BACKGROUND;
 }
 
 .emailModalContainer {

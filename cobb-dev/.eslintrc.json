@@ -19,6 +19,8 @@
     "react/jsx-props-no-spreading": "off",
     "react/no-unescaped-entities": "off",
     "react/jsx-pascal-case": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/function-component-definition": "off",
     "import/prefer-default-export": "off",
     "react/require-default-props": "off",
     "react/self-closing-comp": "warn",

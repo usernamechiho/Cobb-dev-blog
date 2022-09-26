@@ -2,8 +2,8 @@ import Paper from '@mui/material/Paper';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
-import wind from 'public/imgs/wind.png';
 import styles from './sendEmail.module.scss';
+import Greeting from './Components/Greeting';
 
 function Send_email() {
   const [email, setEmail] = useState('');
@@ -29,6 +29,9 @@ function Send_email() {
 
   return (
     <div className={styles.emailContainer}>
+      <section className={styles.greetingAndImg}>
+        <Greeting />
+      </section>
       <Paper className={styles.emailModalContainer}>
         <header className={styles.modalHeader}>
           <div>
@@ -37,16 +40,6 @@ function Send_email() {
           </div>
         </header>
       </Paper>
-      <div
-        style={{
-          backgroundImage: `url(${wind.src})`,
-          width: '250px',
-          height: '250px',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-        }}
-      />
     </div>
   );
 }

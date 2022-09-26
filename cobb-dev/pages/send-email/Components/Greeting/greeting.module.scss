@@ -1,0 +1,113 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+.greetingContainer {
+  min-width: 380px;
+  height: 300px;
+  padding: 20px;
+  line-height: 40px;
+
+  @include responsive.after(MD) {
+    display: flex;
+    padding-top: 40px;
+    line-height: 60px;
+  }
+
+  p {
+    font-size: 16px;
+    color: color.$GRAYA;
+
+    @include responsive.after(MD) {
+      font-size: 30px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    font-weight: 500;
+    color: color.$GRAY3;
+    animation: shake 0.2s ease-in-out 2;
+  }
+}
+
+.cloudImage {
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @include responsive.after(MD) {
+    margin-left: 100px;
+    animation: cloudMoving 5s linear infinite;
+  }
+}
+
+@keyframes cloudMoving {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-20px);
+  }
+
+  20% {
+    transform: translateY(-40px);
+  }
+
+  30% {
+    transform: translateY(-20px);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  60% {
+    transform: translateY(50px);
+  }
+
+  70% {
+    transform: translateY(80px);
+  }
+
+  80% {
+    transform: translateY(50px);
+  }
+
+  90% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
