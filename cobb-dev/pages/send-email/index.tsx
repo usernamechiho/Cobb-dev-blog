@@ -29,17 +29,14 @@ function Send_email() {
 
   return (
     <div className={styles.emailContainer}>
-      <section className={styles.greetingAndImg}>
-        <Greeting />
-      </section>
-      <Paper className={styles.emailModalContainer}>
-        <header className={styles.modalHeader}>
-          <div>
-            <SendRoundedIcon className={styles.sendIcon} />
-            Email to iamchho1@gmail.com
-          </div>
-        </header>
-      </Paper>
+      <div className={styles.emailContentContainer}>
+        <section className={styles.emailDesc}>
+          <Greeting />
+        </section>
+        <section className={styles.emailFormContainer}>
+          <div className={styles.emailForm}>1</div>
+        </section>
+      </div>
     </div>
   );
 }

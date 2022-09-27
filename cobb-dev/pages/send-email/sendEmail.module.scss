@@ -3,35 +3,40 @@
 @use 'styles/_Global/responsive.scss';
 
 .emailContainer {
-  height: calc(100% - 70px);
-  background: color.$BLACK_BACKGROUND;
+  display: flex;
+  height: calc(100vh - 65px);
+  background: color.$EMAIL_BACKGORUND;
 }
 
-.emailModalContainer {
-  width: 200px;
-  height: 200px;
-  border-radius: 11px;
+.emailContentContainer {
+  display: flex;
+  margin: auto;
+  background: color.$EMAIL_CONTAINER;
+  border-radius: 10px;
 
   @include responsive.after(MD) {
-    width: 600px;
-    height: 400px;
+    width: 850px;
+    height: 500px;
   }
 }
 
-.modalHeader {
-  @include flexbox.flexbox(start, center);
-  width: 100%;
-  height: 50px;
-  padding: 0 10px;
-  font-size: 14px;
-  font-weight: 600;
-  color: color.$MODAL_HEADER_FONT;
-  background: color.$MODAL_HEADER_BACKGROUND;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.emailDesc {
+  @include flexbox.flexbox(center, center);
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
 
-  .sendIcon {
-    margin: 0 10px;
-    font-size: 10px;
+.emailFormContainer {
+  @include flexbox.flexbox(center, center);
+  width: 50%;
+  height: 100%;
+
+  .emailForm {
+    width: 75%;
+    height: 80%;
+    padding: 30px;
+    background: color.$WHITE;
+    border-radius: 10px;
   }
 }

@@ -1,31 +1,35 @@
-import wind from 'public/imgs/wind.png';
+import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
+import BugReportOutlinedIcon from '@mui/icons-material/BugReportOutlined';
+import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import styles from './greeting.module.scss';
 
 const Greeting = () => {
   return (
     <div className={styles.greetingContainer}>
-      <section>
+      <section style={{ height: '40%' }}>
+        <h1>Inform Me.</h1>
         <p>
-          안녕하세요. <span>코브</span>입니다.
-        </p>
-        <p>
-          블로그의 <span>문제점</span>, <span>개선점</span>이 보이시면 메일 부탁드려요.
-        </p>
-        <p>
-          간단한 <span>질문</span>도 감사히 받겠습니다!
-        </p>
-        <p>
-          다른 <span>용무</span>도 편하게 연락주세요.
+          이메일을 보내주세요. <br /> 24시간내로 답장 드리겠습니다 ☻
         </p>
       </section>
 
-      <section>
-        <div
-          className={styles.cloudImage}
-          style={{
-            backgroundImage: `url(${wind.src})`,
-          }}
-        />
+      <section className={styles.emailIconAndDesc}>
+        <p>
+          <BugReportOutlinedIcon /> 개선점, 문제점
+        </p>
+        <p>
+          <WorkspacesOutlinedIcon /> 자유로운 질문
+        </p>
+        <p>
+          <AlternateEmailOutlinedIcon /> iamchho1@gmail.com
+        </p>
+      </section>
+
+      <section className={styles.githubButtonContainer}>
+        <button type='button' className={styles.githubButton}>
+          <GitHubIcon className={styles.emailFormIcon} />
+        </button>
       </section>
     </div>
   );
