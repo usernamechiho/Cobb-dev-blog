@@ -6,8 +6,15 @@
   width: 80%;
   height: 85%;
   padding: 25px;
+  margin-bottom: 40px;
   background: color.$WHITE;
   border-radius: 10px;
+
+  @include responsive.after(MD) {
+    width: 80%;
+    height: 85%;
+    margin-bottom: 0;
+  }
 }
 
 .emailForm {
@@ -85,11 +92,15 @@
 
   .sendButton {
     width: 150px;
-    margin-top: 50px;
-    margin-left: 160px;
+    margin-top: 20px;
     color: color.$WHITE;
     text-transform: none;
     background: color.$EMAIL_BACKGROUND;
+
+    @include responsive.after(MD) {
+      margin-top: 50px;
+      margin-left: 160px;
+    }
 
     svg {
       margin-right: 10px;

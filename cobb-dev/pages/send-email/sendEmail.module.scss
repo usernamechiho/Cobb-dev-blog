@@ -5,16 +5,21 @@
 .emailContainer {
   display: flex;
   height: calc(100vh - 65px);
+  overflow-y: scroll;
   background: color.$EMAIL_BACKGROUND;
 }
 
 .emailContentContainer {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
   margin: auto;
   background: color.$EMAIL_CONTAINER;
   border-radius: 10px;
 
   @include responsive.after(MD) {
+    flex-direction: row;
     width: 900px;
     height: 550px;
   }
@@ -22,13 +27,23 @@
 
 .emailDesc {
   @include flexbox.flexbox(center, center);
-  flex-direction: column;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 400px;
+
+  @include responsive.after(MD) {
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+  }
 }
 
 .emailFormContainer {
   @include flexbox.flexbox(center, center);
-  width: 50%;
-  height: 100%;
+  width: 100%;
+
+  @include responsive.after(MD) {
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+  }
 }

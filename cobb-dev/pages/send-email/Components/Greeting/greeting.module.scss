@@ -5,10 +5,13 @@
 .greetingContainer {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  height: 80%;
   color: color.$WHITE;
   letter-spacing: 1px;
+
+  @include responsive.after(MD) {
+    width: 70%;
+    height: 80%;
+  }
 
   h1 {
     font-size: 40px;
@@ -44,8 +47,12 @@
 .githubButtonContainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   height: 20%;
+  margin-top: 40px;
+
+  @include responsive.after(MD) {
+    justify-content: flex-end;
+  }
 
   .githubButton {
     width: 35px;
