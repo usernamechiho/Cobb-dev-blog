@@ -35,6 +35,12 @@
     "newline-per-chained-call": "off",
     "max-len": "off",
     "comma-dangle": "off",
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelAttributes": ["htmlFor"]
+      }
+    ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {

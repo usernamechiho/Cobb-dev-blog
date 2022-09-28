@@ -11,8 +11,8 @@
   letter-spacing: 1px;
 
   h1 {
-    font-size: 30px;
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 800;
   }
 
   p {
@@ -44,7 +44,7 @@
 .githubButtonContainer {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   height: 20%;
 
   .githubButton {

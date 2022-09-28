@@ -1,7 +1,6 @@
-import Paper from '@mui/material/Paper';
-import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
+import EmailForm from './Components/EmailForm';
 import styles from './sendEmail.module.scss';
 import Greeting from './Components/Greeting';
 
@@ -34,7 +33,7 @@ function Send_email() {
           <Greeting />
         </section>
         <section className={styles.emailFormContainer}>
-          <div className={styles.emailForm}>1</div>
+          <EmailForm />
         </section>
       </div>
     </div>

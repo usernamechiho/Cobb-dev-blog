@@ -1,0 +1,100 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+.emailFormContainer {
+  width: 80%;
+  height: 85%;
+  padding: 25px;
+  background: color.$WHITE;
+  border-radius: 10px;
+}
+
+.emailForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1px;
+
+  svg {
+    font-size: 22px;
+    color: color.$GRAYD;
+  }
+
+  .titleIcon {
+    position: absolute;
+    top: 27px;
+    left: 10px;
+  }
+
+  .yourEmailIcon {
+    position: absolute;
+    top: 102px;
+    left: 10px;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: color.$EMAIL_CONTAINER;
+  }
+
+  .label {
+    margin-top: 15px;
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 0 40px;
+    color: color.$EMAIL_CONTAINER;
+    border: 1.5px solid color.$GRAYD;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  input:focus {
+    border: 2px solid color.$EMAIL_BACKGROUND;
+  }
+
+  .titleInput:focus + .titleIcon {
+    color: color.$EMAIL_BACKGROUND;
+  }
+
+  .emailInput:focus + .yourEmailIcon {
+    color: color.$EMAIL_BACKGROUND;
+  }
+
+  textarea {
+    width: 100%;
+    height: 160px;
+    padding: 10px;
+    color: color.$EMAIL_CONTAINER;
+    resize: none;
+    background: color.$GRAYE;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  textarea:focus {
+    background: color.$WHITE;
+    border: 2px solid color.$EMAIL_BACKGROUND;
+  }
+
+  .sendButton {
+    width: 150px;
+    margin-top: 50px;
+    margin-left: 160px;
+    color: color.$WHITE;
+    text-transform: none;
+    background: color.$EMAIL_BACKGROUND;
+
+    svg {
+      margin-right: 10px;
+      font-size: 15px;
+      color: color.$WHITE;
+    }
+  }
+}

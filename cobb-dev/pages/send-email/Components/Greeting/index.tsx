@@ -1,6 +1,7 @@
 import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
 import BugReportOutlinedIcon from '@mui/icons-material/BugReportOutlined';
 import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
+import Tooltip from '@mui/material/Tooltip';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import styles from './greeting.module.scss';
 
@@ -27,9 +28,11 @@ const Greeting = () => {
       </section>
 
       <section className={styles.githubButtonContainer}>
-        <button type='button' className={styles.githubButton}>
-          <GitHubIcon className={styles.emailFormIcon} />
-        </button>
+        <Tooltip title='Github 이동'>
+          <button type='button' className={styles.githubButton}>
+            <GitHubIcon className={styles.emailFormIcon} />
+          </button>
+        </Tooltip>
       </section>
     </div>
   );
