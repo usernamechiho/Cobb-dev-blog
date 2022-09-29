@@ -58,13 +58,13 @@ const EmailForm = () => {
         },
         '16eWOhhsJIXcTkcm4'
       )
-      .then((res) => {
+      .then(() => {
         notifySuccess();
         setTitle('');
         setEmail('');
         setMessage('');
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {});
   };
 
   return (
