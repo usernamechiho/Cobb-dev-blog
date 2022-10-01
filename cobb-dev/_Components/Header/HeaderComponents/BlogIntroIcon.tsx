@@ -18,9 +18,9 @@ function BlogIntroIcon({ isMenu, pathname }: IIsMenu) {
         <a>
           <MenuItem>
             <ListItemIcon>
-              <FeedIcon fontSize='medium' style={{ color: isActive ? '#007aff' : 'black' }} />
+              <FeedIcon fontSize='medium' style={{ color: isActive ? 'black' : '#aaaaaa' }} />
             </ListItemIcon>
-            <ListItemText style={{ color: '#666666' }}>블로그소개</ListItemText>
+            <ListItemText style={{ color: isActive ? 'black' : '#aaaaaa' }}>블로그소개</ListItemText>
           </MenuItem>
         </a>
       </Link>
@@ -30,7 +30,7 @@ function BlogIntroIcon({ isMenu, pathname }: IIsMenu) {
   return (
     <Link href='/blog-description'>
       <a>
-        <FeedIcon fontSize='medium' style={{ color: isActive ? '#007aff' : 'black', marginLeft: '20px' }} />
+        <FeedIcon fontSize='medium' style={{ color: isActive ? 'black' : '#aaaaaa', marginLeft: '20px' }} />
       </a>
     </Link>
   );

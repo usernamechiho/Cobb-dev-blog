@@ -18,9 +18,9 @@ function IntroIcon({ isMenu, pathname }: IIsMenu) {
         <a>
           <MenuItem>
             <ListItemIcon>
-              <FaceIcon fontSize='medium' style={{ color: isActive ? '#007aff' : 'black' }} />
+              <FaceIcon fontSize='medium' style={{ color: isActive ? 'black' : '#aaaaaa' }} />
             </ListItemIcon>
-            <ListItemText style={{ color: '#666666' }}>주인 소개</ListItemText>
+            <ListItemText style={{ color: isActive ? 'black' : '#aaaaaa' }}>주인 소개</ListItemText>
           </MenuItem>
         </a>
       </Link>
@@ -30,7 +30,7 @@ function IntroIcon({ isMenu, pathname }: IIsMenu) {
   return (
     <Link href='/owner-description'>
       <a>
-        <FaceIcon fontSize='medium' style={{ color: isActive ? '#007aff' : 'black' }} />
+        <FaceIcon fontSize='medium' style={{ color: isActive ? 'black' : '#aaaaaa' }} />
       </a>
     </Link>
   );

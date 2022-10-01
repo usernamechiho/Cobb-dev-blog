@@ -18,9 +18,9 @@ function EmailIcon({ isMenu, pathname }: IIsMenu) {
         <a>
           <MenuItem>
             <ListItemIcon>
-              <MailIcon fontSize='medium' style={{ color: isActive ? '#007aff' : 'black' }} />
+              <MailIcon fontSize='medium' style={{ color: isActive ? 'black' : '#aaaaaa' }} />
             </ListItemIcon>
-            <ListItemText style={{ color: '#666666' }}>이메일 전송</ListItemText>
+            <ListItemText style={{ color: isActive ? 'black' : '#aaaaaa' }}>이메일 전송</ListItemText>
           </MenuItem>
         </a>
       </Link>
@@ -30,7 +30,7 @@ function EmailIcon({ isMenu, pathname }: IIsMenu) {
   return (
     <Link href='send-email'>
       <a>
-        <MailIcon fontSize='medium' style={{ color: isActive ? '#007aff' : 'black', marginLeft: '20px' }} />
+        <MailIcon fontSize='medium' style={{ color: isActive ? 'black' : '#aaaaaa', marginLeft: '20px' }} />
       </a>
     </Link>
   );
