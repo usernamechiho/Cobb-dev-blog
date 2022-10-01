@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -18,15 +19,18 @@ function Header() {
   const handleOpenMenu = () => setIsMenu((prev) => !prev);
   const handleClickAway = () => setIsMenu(false);
 
+  const router = useRouter();
+  const { pathname } = router;
+
   return (
     <header className={styles.headerComponent}>
       <Typography variant='h5' component='div' sx={{ flexGrow: 1 }}>
         Cobb-dev
       </Typography>
       <nav className={styles.headerNavSection}>
-        <IntroIcon />
-        <BlogIntroIcon />
-        <EmailIcon />
+        <IntroIcon isMenu={isMenu} pathname={pathname} />
+        <BlogIntroIcon isMenu={isMenu} pathname={pathname} />
+        <EmailIcon isMenu={isMenu} pathname={pathname} />
       </nav>
       <IconButton
         edge='start'
@@ -43,10 +47,10 @@ function Header() {
           <div className={styles.menuSelectBox}>
             <Paper sx={{ width: 200 }}>
               <MenuList>
-                <IntroIcon />
-                <BlogIntroIcon />
+                <IntroIcon isMenu={isMenu} pathname={pathname} />
+                <BlogIntroIcon isMenu={isMenu} pathname={pathname} />
                 <Divider />
-                <EmailIcon />
+                <EmailIcon isMenu={isMenu} pathname={pathname} />
               </MenuList>
             </Paper>
           </div>

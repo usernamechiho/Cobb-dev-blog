@@ -1,19 +1,36 @@
 import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import AttachEmailIcon from '@mui/icons-material/AttachEmail';
+import MailIcon from '@mui/icons-material/Mail';
 import Link from 'next/link';
 
-function EmailIcon() {
+interface IIsMenu {
+  isMenu: boolean;
+  pathname: string;
+}
+
+function EmailIcon({ isMenu, pathname }: IIsMenu) {
+  const isActive = Boolean(pathname === '/send-email');
+
+  if (isMenu) {
+    return (
+      <Link href='send-email'>
+        <a>
+          <MenuItem>
+            <ListItemIcon>
+              <MailIcon fontSize='medium' style={{ color: isActive ? '#007aff' : 'black' }} />
+            </ListItemIcon>
+            <ListItemText style={{ color: '#666666' }}>이메일 전송</ListItemText>
+          </MenuItem>
+        </a>
+      </Link>
+    );
+  }
+
   return (
     <Link href='send-email'>
       <a>
-        <MenuItem>
-          <ListItemIcon>
-            <AttachEmailIcon fontSize='medium' style={{ color: 'black' }} />
-          </ListItemIcon>
-          <ListItemText style={{ color: '#666666' }}>이메일 전송</ListItemText>
-        </MenuItem>
+        <MailIcon fontSize='medium' style={{ color: isActive ? '#007aff' : 'black', marginLeft: '20px' }} />
       </a>
     </Link>
   );
