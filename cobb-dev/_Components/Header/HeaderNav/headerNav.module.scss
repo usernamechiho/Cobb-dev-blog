@@ -1,0 +1,22 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/responsive.scss';
+@use 'styles/_Global/flexbox.scss';
+
+.sidebarNavContainer {
+  color: color.$MAIN_BLACK;
+
+  li {
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 4px;
+
+    @include responsive.after(ML) {
+      font-size: 35px;
+      line-height: 50px;
+    }
+
+    &:hover {
+      color: color.$MAIN_LIGHT_GRAY;
+    }
+  }
+}
