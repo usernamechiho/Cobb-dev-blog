@@ -1,4 +1,7 @@
-@use '/_Global/_color.scss';
+@font-face {
+  font-family: main-font;
+  src: url('../public/fonts/Heebo-Regular.ttf');
+}
 
 html,
 body,
@@ -83,15 +86,21 @@ audio,
 video {
   padding: 0;
   margin: 0;
-  font: inherit;
-  font-size: 100%;
   vertical-align: baseline;
   border: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: main-font, sans-serif;
+  line-height: 1;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -109,41 +118,6 @@ section {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
 * {
   box-sizing: border-box;
-}
-
-button {
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  background: none;
-  border: none;
 }

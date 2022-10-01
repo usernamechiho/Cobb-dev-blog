@@ -1,16 +1,9 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
+import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
-import Divider from '@mui/material/Divider';
-import Paper from '@mui/material/Paper';
-import MenuList from '@mui/material/MenuList';
-import IntroIcon from '_Components/Header/HeaderComponents/IntroIcon';
-import BlogIntroIcon from '_Components/Header/HeaderComponents/BlogIntroIcon';
-import EmailIcon from '_Components/Header/HeaderComponents/EmailIcon';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
+
 import styles from './header.module.scss';
 
 function Header() {
@@ -24,38 +17,17 @@ function Header() {
 
   return (
     <header className={styles.headerComponent}>
-      <Typography variant='h5' component='div' sx={{ flexGrow: 1 }}>
-        Cobb-dev
-      </Typography>
-      <nav className={styles.headerNavSection}>
-        <IntroIcon isMenu={isMenu} pathname={pathname} />
-        <BlogIntroIcon isMenu={isMenu} pathname={pathname} />
-        <EmailIcon isMenu={isMenu} pathname={pathname} />
-      </nav>
-      <IconButton
-        edge='start'
-        color='default'
-        aria-label='menu'
-        onClick={handleOpenMenu}
-        className={styles.hamburgerIcon}
-      >
-        <MenuIcon style={{ fontSize: 35 }} />
-      </IconButton>
-
-      {isMenu && (
-        <ClickAwayListener onClickAway={handleClickAway}>
-          <div className={styles.menuSelectBox}>
-            <Paper sx={{ width: 200 }}>
-              <MenuList>
-                <IntroIcon isMenu={isMenu} pathname={pathname} />
-                <BlogIntroIcon isMenu={isMenu} pathname={pathname} />
-                <Divider />
-                <EmailIcon isMenu={isMenu} pathname={pathname} />
-              </MenuList>
-            </Paper>
-          </div>
-        </ClickAwayListener>
-      )}
+      <div className={styles.headerIcon}>
+        <p>
+          <WorkspacesOutlinedIcon />
+        </p>
+        <p>Cobb.dev</p>
+      </div>
+      <div className={styles.hamburgerContainer}>
+        <p>
+          <MenuIcon />
+        </p>
+      </div>
     </header>
   );
 }
