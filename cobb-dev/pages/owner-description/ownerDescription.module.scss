@@ -51,12 +51,16 @@
   z-index: 2;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 300vh;
   padding-top: 65px;
   background: color.$MAIN_WHITE;
 
   .stepperContainer {
+    position: sticky;
+    top: 65px;
+    z-index: 4;
     width: 100%;
+    background: color.$MAIN_WHITE;
   }
 
   .ownerAndEducation {
@@ -69,13 +73,12 @@
     }
   }
 
-  .techStacksBox {
-    margin: 50px 0;
+  .descriptionContainer {
+    z-index: 3;
+    margin: 70px 0;
 
-    .codeIcon,
-    .codeOffIcon {
-      font-size: 30px;
-      color: color.$MAIN_BLACK;
+    @include responsive.after(MD) {
+      margin: 100px 0;
     }
   }
 }

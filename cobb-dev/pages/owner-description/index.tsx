@@ -1,10 +1,9 @@
-import CodeIcon from '@mui/icons-material/Code';
-import CodeOffIcon from '@mui/icons-material/CodeOff';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import DailyStepper from './Components/DailyStepper';
 import styles from './ownerDescription.module.scss';
 import Arrow from './Components/Arrow';
+import Description from './Components/Description';
 
 const Owner_description = () => {
   const [scrollY, setScrollY] = useState<number>(0);
@@ -32,15 +31,9 @@ const Owner_description = () => {
           <DailyStepper />
         </section>
 
-        <motion.section
-          className={styles.techStacksBox}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <CodeIcon className={styles.codeIcon} />
-          <CodeOffIcon className={styles.codeOffIcon} />
-        </motion.section>
+        <section className={styles.descriptionContainer}>
+          <Description />
+        </section>
       </section>
     </div>
   );

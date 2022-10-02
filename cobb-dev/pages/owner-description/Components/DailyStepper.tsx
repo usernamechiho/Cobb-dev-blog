@@ -6,7 +6,7 @@ const DAILY_STEP = ['Wake up', 'Start coding', 'Sleep in'];
 
 function DailyStepper() {
   return (
-    <Stepper alternativeLabel sx={{ circle: { color: '#1c1c21' }, margin: '20px 0' }}>
+    <Stepper alternativeLabel sx={{ circle: { color: '#1c1c21' }, margin: '10px 0' }}>
       {DAILY_STEP.map((daily) => (
         <Step key={daily}>
           <StepLabel>
