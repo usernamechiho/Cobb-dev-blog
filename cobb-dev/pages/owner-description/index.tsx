@@ -1,44 +1,51 @@
-import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import CodeIcon from '@mui/icons-material/Code';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import DailyStepper from './Components/DailyStepper';
 import styles from './ownerDescription.module.scss';
 import TechStacks from './Components/TechStacks';
-import OwnerDesc from './Components/OwnerDesc';
-import EducationDesc from './Components/EducationDesc';
+import Arrow from './Components/Arrow';
 
-const owner_description = () => {
+const Owner_description = () => {
+  const [scrollY, setScrollY] = useState<number>(0);
+
+  useEffect(() => {
+    const scroll = () => {
+      setScrollY(window.scrollY / 100);
+    };
+    window.addEventListener('scroll', scroll, false);
+    return () => window.removeEventListener('scroll', scroll, false);
+  }, []);
+
   return (
     <div className={styles.pageContainer}>
-      <section className={styles.stepperContainer}>
-        <DailyStepper />
+      <section className={styles.pageDescriptionSec} style={{ opacity: 1 - scrollY / 3 }}>
+        <h1>INFORMATION, COBB / 2022</h1>
+        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }}>
+          Hello World !
+        </motion.p>
+        <Arrow />
       </section>
 
-      <section className={styles.ownerAndEducation}>
-        <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
-          <div>
-            <OwnerDesc />
-          </div>
-        </motion.div>
+      <section className={styles.overlayParent}>
+        <section className={styles.stepperContainer}>
+          <DailyStepper />
+        </section>
 
-        <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
-          <div className={styles.educationIconBox}>
-            <SchoolOutlinedIcon className={styles.educationIcon} />
-            <EducationDesc />
-          </div>
-        </motion.div>
-      </section>
-
-      <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-        <section className={styles.techStacksBox}>
+        <motion.section
+          className={styles.techStacksBox}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <CodeIcon className={styles.codeIcon} />
           <CodeOffIcon className={styles.codeOffIcon} />
           <TechStacks />
-        </section>
-      </motion.div>
+        </motion.section>
+      </section>
     </div>
   );
 };
 
-export default owner_description;
+export default Owner_description;

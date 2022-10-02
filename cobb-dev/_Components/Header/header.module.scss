@@ -3,7 +3,8 @@
 @use 'styles/_Global/z-index.scss';
 
 .headerComponent {
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: z-index.$Z_HEADER;
   display: flex;
   align-items: center;
