@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import BlogOpenReason from './Components/BlogOpenReason';
-import BlogTechStacks from './Components/BlogTechStacks';
 import FE_Environment from './Components/FE-Environment';
 import RecommendedDevice from './Components/Recommended-device';
 import BlogIssue from './Components/BlogIssue';
@@ -15,11 +14,6 @@ const blog_description = () => {
         </section>
         <section className={styles.typewriterSection}>
           <FE_Environment />
-        </section>
-      </motion.div>
-      <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
-        <section className={styles.blogStacks}>
-          <BlogTechStacks />
         </section>
       </motion.div>
       <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>

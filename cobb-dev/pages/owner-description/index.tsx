@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import DailyStepper from './Components/DailyStepper';
 import styles from './ownerDescription.module.scss';
-import TechStacks from './Components/TechStacks';
 import Arrow from './Components/Arrow';
 
 const Owner_description = () => {
@@ -41,7 +40,6 @@ const Owner_description = () => {
         >
           <CodeIcon className={styles.codeIcon} />
           <CodeOffIcon className={styles.codeOffIcon} />
-          <TechStacks />
         </motion.section>
       </section>
     </div>
