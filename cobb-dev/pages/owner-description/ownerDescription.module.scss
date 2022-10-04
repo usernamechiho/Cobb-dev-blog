@@ -27,7 +27,7 @@
     color: color.$MAIN_LIGHT_GRAY;
     word-spacing: 1px;
 
-    @include responsive.after(ML) {
+    @include responsive.after(MD) {
       font-size: 18px;
       word-spacing: 3px;
     }
@@ -38,7 +38,7 @@
     font-family: sub-font, sans-serif;
     font-size: 50px;
 
-    @include responsive.after(ML) {
+    @include responsive.after(MD) {
       margin: 70px 0;
       font-size: 90px;
     }

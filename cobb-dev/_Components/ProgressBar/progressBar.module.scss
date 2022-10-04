@@ -8,7 +8,7 @@
   width: 100%;
   height: 5px;
 
-  @include responsive.after(ML) {
+  @include responsive.after(MD) {
     height: 4px;
   }
 

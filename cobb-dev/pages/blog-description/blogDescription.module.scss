@@ -1,0 +1,52 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+@font-face {
+  font-family: sub-font;
+  src: url('../../public/fonts/Lora-Regular.ttf');
+}
+
+.blogDescContainer {
+  flex-direction: column;
+  width: 100%;
+  background: color.$MAIN_WHITE;
+  @include flexbox.flexbox(center, center);
+
+  .home {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include responsive.after(ML) {
+      width: 90%;
+      height: 400px;
+      margin-top: 50px;
+      background-size: 90% 400px;
+    }
+
+    @include responsive.after(MD) {
+      width: 70%;
+      height: 500px;
+      margin-top: 50px;
+      background-size: 100% 500px;
+    }
+  }
+}
+
+.typewriter {
+  div {
+    margin-top: 50px;
+    font-family: sub-font, sans-serif;
+    font-size: 24px;
+    background: color.$MAIN_WHITE;
+
+    @include responsive.after(MD) {
+      margin-top: 100px;
+      font-size: 70px;
+    }
+  }
+}

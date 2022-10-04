@@ -1,35 +1,33 @@
-import { motion } from 'framer-motion';
-import BlogOpenReason from './Components/BlogOpenReason';
-import FE_Environment from './Components/FE-Environment';
-import RecommendedDevice from './Components/Recommended-device';
-import BlogIssue from './Components/BlogIssue';
-import styles from './blogDesc.module.scss';
+import Typewriter from 'typewriter-effect';
+import Home from 'public/imgs/Home.png';
+import styles from './blogDescription.module.scss';
 
 const blog_description = () => {
   return (
-    <main className={styles.blogDescContainer}>
-      <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-        <section className={styles.blogReasonContainer}>
-          <BlogOpenReason />
-        </section>
-        <section className={styles.typewriterSection}>
-          <FE_Environment />
-        </section>
-      </motion.div>
-      <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-        <div className={styles.recommendedDevice}>
-          <h1>💻 추천 디바이스 환경</h1>
-        </div>
-        <section className={styles.iphoneImageContainer}>
-          <RecommendedDevice />
-        </section>
-      </motion.div>
-      <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-        <section className={styles.blogProblem}>
-          <BlogIssue />
-        </section>
-      </motion.div>
-    </main>
+    <div className={styles.blogDescContainer}>
+      <div
+        className={styles.home}
+        style={{
+          backgroundImage: `url(${Home.src})`,
+        }}
+      />
+      <div className={styles.typewriter}>
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+              .typeString('It depends.')
+              .pauseFor(3500)
+              .deleteAll()
+              .pauseFor(3000)
+              .typeString('It happens.')
+              .pauseFor(3500)
+              .deleteAll()
+              .start();
+          }}
+          options={{ loop: true }}
+        />
+      </div>
+    </div>
   );
 };
 
