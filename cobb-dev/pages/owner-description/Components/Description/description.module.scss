@@ -3,13 +3,15 @@
 @use 'styles/_Global/responsive.scss';
 
 .ownerDescContainer {
-  @include flexbox.flexbox(start, center);
+  @include flexbox.flexbox(center, center);
   flex-direction: column;
+  width: 100%;
 }
 
 .mainDescription {
-  @include flexbox.flexbox(start, center);
+  @include flexbox.flexbox(center, center);
   flex-direction: column;
+  width: 100%;
 
   p {
     font-size: 12px;
@@ -35,21 +37,54 @@
 }
 
 .imageAndIntro {
-  margin-top: 30px;
+  margin: 50px 0;
 
   .chihoJpg {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100px 100px;
+    background-size: 120px 120px;
     border-radius: 50%;
 
     @include responsive.after(MD) {
-      width: 150px;
-      height: 150px;
-      margin-top: 50px;
-      background-size: 150px 150px;
+      width: 170px;
+      height: 170px;
+      margin: 70px 0;
+      background-size: 170px 170px;
+    }
+  }
+}
+
+.intro {
+  @include flexbox.flexbox(start, start);
+  flex-direction: column;
+  width: 80%;
+  line-height: 20px;
+  text-align: justify;
+
+  @include responsive.after(MD) {
+    width: 50%;
+  }
+
+  p {
+    font-size: 12px;
+    color: color.$MAIN_GRAY;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+  }
+
+  p:not(p:first-child) {
+    margin-top: 40px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  @include responsive.after(MD) {
+    p {
+      font-size: 14px;
     }
   }
 }

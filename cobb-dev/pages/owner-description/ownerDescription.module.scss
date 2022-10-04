@@ -50,10 +50,13 @@
   position: sticky;
   z-index: 2;
   flex-direction: column;
-  width: 100%;
-  height: 300vh;
+  height: 1100px;
   padding-top: 65px;
   background: color.$MAIN_WHITE;
+
+  @include responsive.after(MD) {
+    height: 1300px;
+  }
 
   .stepperContainer {
     position: sticky;
@@ -75,10 +78,11 @@
 
   .descriptionContainer {
     z-index: 3;
-    margin: 70px 0;
+    width: 100%;
+    margin: 120px 0;
 
     @include responsive.after(MD) {
-      margin: 100px 0;
+      margin: 150px 0;
     }
   }
 }
