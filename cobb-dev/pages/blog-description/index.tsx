@@ -1,17 +1,15 @@
 import Typewriter from 'typewriter-effect';
-import Home from 'public/imgs/Home.png';
+import Image from 'next/image';
 import styles from './blogDescription.module.scss';
 
 const blog_description = () => {
   return (
     <div className={styles.blogDescContainer}>
-      <div
-        className={styles.home}
-        style={{
-          backgroundImage: `url(${Home.src})`,
-        }}
-      />
-      <div className={styles.typewriter}>
+      <section className={styles.imageContainer}>
+        <Image src='/imgs/Home.png' alt='Cobb Home' className={styles.home} layout='fill' />
+      </section>
+
+      <section className={styles.typewriter}>
         <Typewriter
           onInit={(typewriter) => {
             typewriter
@@ -26,7 +24,7 @@ const blog_description = () => {
           }}
           options={{ loop: true }}
         />
-      </div>
+      </section>
     </div>
   );
 };

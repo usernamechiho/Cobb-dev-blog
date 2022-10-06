@@ -5,6 +5,7 @@
 @font-face {
   font-family: sub-font;
   src: url('../../public/fonts/Lora-Regular.ttf');
+  font-display: swap;
 }
 
 .blogDescContainer {
@@ -12,28 +13,24 @@
   width: 100%;
   background: color.$MAIN_WHITE;
   @include flexbox.flexbox(center, center);
+}
 
-  .home {
-    width: 100%;
-    height: 300px;
-    margin-top: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
 
-    @include responsive.after(ML) {
-      width: 90%;
-      height: 400px;
-      margin-top: 50px;
-      background-size: 90% 400px;
-    }
+  @include responsive.after(ML) {
+    width: 90%;
+    height: 400px;
+    margin-top: 50px;
+  }
 
-    @include responsive.after(MD) {
-      width: 70%;
-      height: 500px;
-      margin-top: 50px;
-      background-size: 100% 500px;
-    }
+  @include responsive.after(MD) {
+    width: 70%;
+    height: 500px;
+    margin-top: 50px;
   }
 }
 

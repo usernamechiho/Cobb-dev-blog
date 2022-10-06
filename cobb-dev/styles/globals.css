@@ -1,6 +1,7 @@
 @font-face {
   font-family: main-font;
   src: url('../public/fonts/Heebo-Regular.ttf');
+  font-display: swap;
 }
 
 html,
