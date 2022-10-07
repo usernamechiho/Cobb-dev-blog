@@ -25,6 +25,10 @@ const blog_description = () => {
           options={{ loop: true }}
         />
       </section>
+
+      <section className={styles.descriptionContainer}>
+        <p>프론트 엔드 생태계는 복잡합니다.</p>
+      </section>
     </div>
   );
 };

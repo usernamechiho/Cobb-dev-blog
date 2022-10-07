@@ -36,14 +36,24 @@
 
 .typewriter {
   div {
-    margin-top: 50px;
+    margin: 50px 0;
     font-family: sub-font, sans-serif;
     font-size: 24px;
     background: color.$MAIN_WHITE;
 
     @include responsive.after(MD) {
-      margin-top: 100px;
+      margin: 100px 0;
       font-size: 70px;
     }
+  }
+}
+
+.descriptionContainer {
+  width: 90%;
+  height: 500px;
+  background: rgb(20, 104, 104);
+
+  @include responsive.after(MD) {
+    width: 70%;
   }
 }
