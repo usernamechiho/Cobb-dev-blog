@@ -36,24 +36,41 @@
 
 .typewriter {
   div {
-    margin: 50px 0;
+    margin: 100px 0;
     font-family: sub-font, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     background: color.$MAIN_WHITE;
 
     @include responsive.after(MD) {
-      margin: 100px 0;
-      font-size: 70px;
+      margin: 150px 0;
+      font-size: 75px;
     }
   }
 }
 
 .descriptionContainer {
   width: 90%;
-  height: 500px;
-  background: rgb(20, 104, 104);
+  height: 870px;
+  text-align: justify;
+
+  p {
+    font-size: 12px;
+    line-height: 30px;
+    color: color.$MAIN_GRAY;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+
+    @include responsive.after(MD) {
+      font-size: 14px;
+    }
+  }
+
+  p:not(p:first-child) {
+    margin-top: 40px;
+  }
 
   @include responsive.after(MD) {
-    width: 70%;
+    width: 50%;
+    height: 650px;
   }
 }
