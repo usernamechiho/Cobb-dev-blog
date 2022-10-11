@@ -1,18 +1,41 @@
-import DriveFileRenameOutlineOutlinedIcon from '@mui/icons-material/DriveFileRenameOutlineOutlined';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import { ToastContainer, toast } from 'react-toastify';
+import { styled } from '@mui/material/styles';
 import 'react-toastify/dist/ReactToastify.css';
 import Button from '@mui/material/Button';
 import emailjs from '@emailjs/browser';
-import { useState, MouseEvent, ChangeEvent, useEffect } from 'react';
+import { useState, MouseEvent, ChangeEvent } from 'react';
+import TextField from '@mui/material/TextField';
 import styles from './emailForm.module.scss';
 
+const CustomTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: '#313135',
+  },
+  '& .MuiInput-underline:after': {
+    borderBottomColor: '#313135',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: '#313135',
+    },
+    '&:hover fieldset': {
+      borderColor: '#313135',
+      boxShadow: 'none',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#313135',
+    },
+  },
+});
+
 const EmailForm = () => {
+  const [name, setName] = useState<string>('');
   const [title, setTitle] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
 
+  const handleChangeName = (e: ChangeEvent<HTMLInputElement>) => setName(e.currentTarget.value);
   const handleChangeTitle = (e: ChangeEvent<HTMLInputElement>) => setTitle(e.currentTarget.value);
   const handleChangeEmail = (e: ChangeEvent<HTMLInputElement>) => setEmail(e.currentTarget.value);
   const handleChangeMessage = (e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.currentTarget.value);
@@ -26,7 +49,6 @@ const EmailForm = () => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: 'colored',
     });
 
   const notifySuccess = () =>
@@ -38,11 +60,10 @@ const EmailForm = () => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: 'colored',
     });
 
   const handleSubmitEmail = (e: MouseEvent<HTMLButtonElement>) => {
-    if (!title.length || !email.length || !message.length) {
+    if (!name.length || !title.length || !email.length || !message.length) {
       notifyError();
       return;
     }
@@ -52,6 +73,7 @@ const EmailForm = () => {
         'service_4mquxy2',
         'template_c98c29r',
         {
+          name,
           title,
           from_email: email,
           message,
@@ -60,6 +82,7 @@ const EmailForm = () => {
       )
       .then(() => {
         notifySuccess();
+        setName('');
         setTitle('');
         setEmail('');
         setMessage('');
@@ -70,25 +93,31 @@ const EmailForm = () => {
   return (
     <>
       <div className={styles.emailFormContainer}>
-        <form className={styles.emailForm}>
-          <label htmlFor='title'>Title</label>
-          <input id='title' className={styles.titleInput} value={title} onChange={handleChangeTitle} />
-          <DriveFileRenameOutlineOutlinedIcon className={styles.titleIcon} />
-
-          <label htmlFor='email' className={styles.label}>
-            Your Email
-          </label>
-          <input id='email' type='email' className={styles.emailInput} value={email} onChange={handleChangeEmail} />
-          <EmailOutlinedIcon className={styles.yourEmailIcon} />
-
-          <label htmlFor='message' className={styles.label}>
-            Message
-          </label>
-          <textarea id='message' onChange={handleChangeMessage} value={message} />
-
-          <Button className={styles.sendButton} onClick={handleSubmitEmail}>
-            <SendRoundedIcon />
-            Send Message
+        <p>FORM</p>
+        <form>
+          <CustomTextField label='Name' variant='standard' onChange={handleChangeName} />
+          <CustomTextField
+            label='Your Email'
+            variant='standard'
+            style={{ marginTop: '20px' }}
+            onChange={handleChangeTitle}
+          />
+          <CustomTextField
+            label='Title'
+            variant='standard'
+            style={{ marginTop: '20px' }}
+            onChange={handleChangeEmail}
+          />
+          <CustomTextField
+            multiline
+            rows={10}
+            label='Message'
+            variant='standard'
+            style={{ marginTop: '50px' }}
+            onChange={handleChangeMessage}
+          />
+          <Button type='button' variant='contained'>
+            <SendRoundedIcon /> Send Email
           </Button>
         </form>
       </div>
@@ -99,7 +128,6 @@ const EmailForm = () => {
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
-        rtl={false}
       />
     </>
   );

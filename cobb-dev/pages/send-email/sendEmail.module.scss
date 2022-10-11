@@ -11,7 +11,7 @@
 .emailContainer {
   flex-direction: column;
   width: 100%;
-  height: 1500px;
+  height: 1600px;
   color: color.$MAIN_BLACK;
   background: color.$MAIN_WHITE;
   @include flexbox.flexbox(start, center);
@@ -110,4 +110,10 @@
       color: color.$MAIN_LIGHT_GRAY;
     }
   }
+}
+
+.emailForm {
+  width: 100%;
+  height: 800px;
+  @include flexbox.flexbox(center, center);
 }

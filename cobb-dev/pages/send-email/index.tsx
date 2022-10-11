@@ -1,4 +1,5 @@
 import styles from './sendEmail.module.scss';
+import EmailForm from './EmailForm';
 
 function Send_email() {
   return (
@@ -39,7 +40,7 @@ function Send_email() {
       </section>
 
       <section className={styles.emailForm}>
-        <p>INFORM ME</p>
+        <EmailForm />
       </section>
     </div>
   );
