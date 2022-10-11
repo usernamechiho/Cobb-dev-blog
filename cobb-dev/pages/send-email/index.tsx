@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styles from './sendEmail.module.scss';
 import EmailForm from './EmailForm';
 
@@ -6,36 +7,65 @@ function Send_email() {
     <div className={styles.emailContainer}>
       <section className={styles.intro}>
         <h1>CONTACT</h1>
-        <p>Let's get to know each other.</p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          Let's get to know each other.
+        </motion.p>
       </section>
 
       <section className={styles.areYou}>
         <div className={styles.areYouIntro}>
-          <p>I'd love to hear from you.</p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
+            I'd love to hear from you.
+          </motion.p>
         </div>
 
         <div className={styles.areYouHaving}>
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
             <p>Have</p>
             <ul>
               <li>• Technical Drawback ?</li>
               <li>• Inquiry ?</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+            viewport={{ once: true }}
+          >
             <p>Need</p>
             <ul>
               <li>• Blog Improvement ?</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.3 }}
+            viewport={{ once: true }}
+          >
             <p>Want</p>
             <ul>
               <li>• Collaborate With ?</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </section>
 

@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import 'react-toastify/dist/ReactToastify.css';
 import Button from '@mui/material/Button';
 import emailjs from '@emailjs/browser';
-import { useState, MouseEvent, ChangeEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 import TextField from '@mui/material/TextField';
 import styles from './emailForm.module.scss';
 
@@ -41,7 +41,7 @@ const EmailForm = () => {
   const handleChangeMessage = (e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.currentTarget.value);
 
   const notifyError = () =>
-    toast.error('입력을 확인해주세요.', {
+    toast.error('Check your input.', {
       position: 'bottom-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -52,7 +52,7 @@ const EmailForm = () => {
     });
 
   const notifySuccess = () =>
-    toast.success('전송을 완료했습니다.', {
+    toast.success('Successfully sent.', {
       position: 'bottom-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -62,7 +62,9 @@ const EmailForm = () => {
       progress: undefined,
     });
 
-  const handleSubmitEmail = (e: MouseEvent<HTMLButtonElement>) => {
+  const handleSubmitEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     if (!name.length || !title.length || !email.length || !message.length) {
       notifyError();
       return;
@@ -81,11 +83,11 @@ const EmailForm = () => {
         '16eWOhhsJIXcTkcm4'
       )
       .then(() => {
-        notifySuccess();
         setName('');
         setTitle('');
         setEmail('');
         setMessage('');
+        notifySuccess();
       })
       .catch((error) => {});
   };
@@ -94,19 +96,21 @@ const EmailForm = () => {
     <>
       <div className={styles.emailFormContainer}>
         <p>FORM</p>
-        <form>
-          <CustomTextField label='Name' variant='standard' onChange={handleChangeName} />
+        <form onSubmit={handleSubmitEmail}>
+          <CustomTextField label='Name' variant='standard' value={name} onChange={handleChangeName} />
           <CustomTextField
             label='Your Email'
             variant='standard'
+            value={email}
             style={{ marginTop: '20px' }}
-            onChange={handleChangeTitle}
+            onChange={handleChangeEmail}
           />
           <CustomTextField
             label='Title'
             variant='standard'
             style={{ marginTop: '20px' }}
-            onChange={handleChangeEmail}
+            value={title}
+            onChange={handleChangeTitle}
           />
           <CustomTextField
             multiline
@@ -114,9 +118,10 @@ const EmailForm = () => {
             label='Message'
             variant='standard'
             style={{ marginTop: '50px' }}
+            value={message}
             onChange={handleChangeMessage}
           />
-          <Button type='button' variant='contained'>
+          <Button type='submit' variant='contained'>
             <SendRoundedIcon /> Send Email
           </Button>
         </form>
