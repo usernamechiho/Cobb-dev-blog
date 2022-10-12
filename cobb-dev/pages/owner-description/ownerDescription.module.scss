@@ -9,6 +9,7 @@
 }
 
 .pageContainer {
+  width: 100%;
   color: color.$MAIN_BLACK;
   background: color.$MAIN_WHITE;
 }
@@ -80,10 +81,16 @@
   .descriptionContainer {
     z-index: 3;
     width: 100%;
-    margin: 120px 0;
+  }
+
+  .cardContainer {
+    @include flexbox.flexbox(start, center);
+    flex-direction: column;
 
     @include responsive.after(MD) {
-      margin: 150px 0;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }

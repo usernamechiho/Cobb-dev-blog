@@ -3,7 +3,35 @@ import { useEffect, useState } from 'react';
 import DailyStepper from './Components/DailyStepper';
 import styles from './ownerDescription.module.scss';
 import Arrow from './Components/Arrow';
+import Card from './Components/Card';
 import Description from './Components/Description';
+
+const CARD_PROPS = [
+  {
+    title: 'Experience',
+    desc: 'A year experience in Front End environment',
+  },
+  {
+    title: 'Experience',
+    desc: 'A year experience in Front End environment',
+  },
+  {
+    title: 'Experience',
+    desc: 'A year experience in Front End environment',
+  },
+  {
+    title: 'Experience',
+    desc: 'A year experience in Front End environment',
+  },
+  {
+    title: 'Experience',
+    desc: 'A year experience in Front End environment',
+  },
+  {
+    title: 'Experience',
+    desc: 'A year experience in Front End environment',
+  },
+];
 
 const Owner_description = () => {
   const [scrollY, setScrollY] = useState<number>(0);
@@ -15,6 +43,8 @@ const Owner_description = () => {
     window.addEventListener('scroll', scroll, false);
     return () => window.removeEventListener('scroll', scroll, false);
   }, []);
+
+  const Cards = CARD_PROPS.map((card) => <Card info={card} />);
 
   return (
     <div className={styles.pageContainer}>
@@ -34,6 +64,8 @@ const Owner_description = () => {
         <section className={styles.descriptionContainer}>
           <Description />
         </section>
+
+        <section className={styles.cardContainer}>{Cards}</section>
       </section>
     </div>
   );

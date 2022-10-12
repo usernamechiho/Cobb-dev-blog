@@ -1,6 +1,5 @@
 import chiho from 'public/imgs/chiho.jpg';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import styles from './description.module.scss';
 
 const Description = () => {
@@ -49,19 +48,6 @@ const Description = () => {
           to use my skills in coding, troubleshooting complex problems and assisting in the timley completion of
           projects.
         </p>
-        <p>
-          I communicate well with teammates, co-workers and Back End Developers. I have a year experience in programming
-          and have been used HTML, CSS, JavaScript, React and Next.js.
-        </p>
-        <p>I'm a graduate of SEOUL TECH(S.Korea), majored in English Literature & Language.</p>
-        <p>
-          Feel free to{' '}
-          <Link href='/send-email'>
-            <a>connect</a>
-          </Link>{' '}
-          with me on questions or exiting opportunities.
-        </p>
-        <p>Thank you and Have fun!</p>
       </motion.div>
     </section>
   );

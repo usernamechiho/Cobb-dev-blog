@@ -1,0 +1,39 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+@font-face {
+  font-family: sub-font;
+  src: url('../../../../public/fonts/Lora-Regular.ttf');
+  font-display: swap;
+}
+
+.cardContainer {
+  @include flexbox.flexbox(center, center);
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 250px;
+  height: 150px;
+  text-align: center;
+  background: color.$MAIN_WHITE;
+
+  @include responsive.after(MD) {
+    width: 300px;
+    height: 200px;
+  }
+
+  h1 {
+    font-family: sub-font, sans-serif;
+    font-size: 18px;
+  }
+
+  div {
+    width: 60%;
+    height: 0.1px;
+    background: color.$MAIN_LIGHT_GRAY;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
