@@ -13,28 +13,29 @@ const CARD_PROPS = [
   },
   {
     title: 'Experience',
-    desc: 'A year experience in Front End environment',
+    desc: 'A year experience in Front End environment1',
   },
   {
     title: 'Experience',
-    desc: 'A year experience in Front End environment',
+    desc: 'A year experience in Front End environment2',
   },
   {
     title: 'Experience',
-    desc: 'A year experience in Front End environment',
+    desc: 'A year experience in Front End environment3',
   },
   {
     title: 'Experience',
-    desc: 'A year experience in Front End environment',
+    desc: 'A year experience in Front End environment4',
   },
   {
     title: 'Experience',
-    desc: 'A year experience in Front End environment',
+    desc: 'A year experience in Front End environment5',
   },
 ];
 
 const Owner_description = () => {
   const [scrollY, setScrollY] = useState<number>(0);
+  const [price, setPrice] = useState<string>('1');
 
   useEffect(() => {
     const scroll = () => {
@@ -44,7 +45,7 @@ const Owner_description = () => {
     return () => window.removeEventListener('scroll', scroll, false);
   }, []);
 
-  const Cards = CARD_PROPS.map((card) => <Card info={card} />);
+  const Cards = CARD_PROPS.map((card) => <Card info={card} key={card.desc} />);
 
   return (
     <div className={styles.pageContainer}>
