@@ -52,12 +52,12 @@
   position: sticky;
   z-index: 2;
   flex-direction: column;
-  height: 1100px;
+  height: 2300px;
   padding-top: 65px;
   background: color.$MAIN_WHITE;
 
   @include responsive.after(MD) {
-    height: 1300px;
+    height: 2050px;
   }
 
   .stepperContainer {

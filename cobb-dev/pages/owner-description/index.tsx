@@ -8,34 +8,33 @@ import Description from './Components/Description';
 
 const CARD_PROPS = [
   {
-    title: 'Experience',
-    desc: 'A year experience in Front End environment',
+    title: 'Graduate of',
+    desc: 'SEOUL TECH (S.Korea)',
+  },
+  {
+    title: 'Tech Stacks',
+    desc: 'JavaScript, TypeScript, React, Next.js',
   },
   {
     title: 'Experience',
-    desc: 'A year experience in Front End environment1',
+    desc: 'A year experience in FE environment',
   },
   {
-    title: 'Experience',
-    desc: 'A year experience in Front End environment2',
+    title: 'Collaborative',
+    desc: 'Love to work as a team',
   },
   {
-    title: 'Experience',
-    desc: 'A year experience in Front End environment3',
+    title: 'Flexible',
+    desc: 'Follow rules & No insist things',
   },
   {
-    title: 'Experience',
-    desc: 'A year experience in Front End environment4',
-  },
-  {
-    title: 'Experience',
-    desc: 'A year experience in Front End environment5',
+    title: 'Straightforward',
+    desc: 'Straight opinions for better service',
   },
 ];
 
 const Owner_description = () => {
   const [scrollY, setScrollY] = useState<number>(0);
-  const [price, setPrice] = useState<string>('1');
 
   useEffect(() => {
     const scroll = () => {

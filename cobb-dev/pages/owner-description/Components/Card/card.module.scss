@@ -13,13 +13,14 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: 250px;
-  height: 150px;
+  height: 130px;
+  margin-top: 50px;
   text-align: center;
   background: color.$MAIN_WHITE;
 
   @include responsive.after(MD) {
     width: 300px;
-    height: 200px;
+    height: 180px;
   }
 
   h1 {
@@ -35,5 +36,9 @@
 
   p {
     font-size: 13px;
+    line-height: 30px;
+    color: color.$MAIN_GRAY;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
   }
 }
