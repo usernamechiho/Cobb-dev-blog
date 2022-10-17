@@ -11,22 +11,25 @@ import { AnimatePresence } from 'framer-motion';
 import styles from './header.module.scss';
 
 function Header() {
+  const router = useRouter();
+
   const [isMenu, setIsMenu] = useState(false);
 
   const handleOpenMenu = () => setIsMenu((prev) => !prev);
-  const handleClickAway = () => setIsMenu(false);
+  const handleCloseMenu = () => setIsMenu(false);
 
-  const router = useRouter();
-  const { pathname } = router;
+  const handleRoutingToMainPage = () => {
+    router.push('/');
+    handleCloseMenu();
+  };
 
   return (
     <>
       <header className={styles.headerComponent}>
         <div className={styles.headerIcon}>
-          <p>
-            <WorkspacesOutlinedIcon />
-          </p>
-          <p>Cobb.dev</p>
+          <button type='button' onClick={handleRoutingToMainPage}>
+            <WorkspacesOutlinedIcon /> Cobb.dev
+          </button>
         </div>
         <div className={styles.hamburgerContainer}>
           <Tooltip title='Menu'>
@@ -36,7 +39,7 @@ function Header() {
           </Tooltip>
         </div>
       </header>
-      <AnimatePresence>{isMenu && <Sidebar handleOpenMenu={handleOpenMenu} />}</AnimatePresence>
+      <AnimatePresence>{isMenu && <Sidebar handleCloseMenu={handleCloseMenu} />}</AnimatePresence>
     </>
   );
 }

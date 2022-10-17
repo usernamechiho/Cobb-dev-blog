@@ -1,10 +1,18 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { IHandleProps } from 'Types/type';
 
 import HeaderNav from '_Components/Header/HeaderNav';
 import styles from './sidebar.module.scss';
 
-const Sidebar = ({ handleOpenMenu }: any) => {
+const Sidebar = ({ handleCloseMenu }: IHandleProps) => {
+  const router = useRouter();
+
+  const handleNavigateAndCloseMenu = () => {
+    router.push('/send-email');
+    handleCloseMenu();
+  };
+
   return (
     <>
       <motion.article
@@ -14,7 +22,7 @@ const Sidebar = ({ handleOpenMenu }: any) => {
         exit={{ y: -400 }}
         transition={{ duration: 1 }}
       >
-        <HeaderNav />
+        <HeaderNav handleCloseMenu={handleCloseMenu} />
       </motion.article>
       <motion.article
         className={styles.sidebarChildContainer}
@@ -25,9 +33,9 @@ const Sidebar = ({ handleOpenMenu }: any) => {
       >
         <div className={styles.childContentContainer}>
           <p>ⓒCOBB</p>
-          <Link href='/send-email'>
-            <a>Contact</a>
-          </Link>
+          <button type='button' onClick={handleNavigateAndCloseMenu}>
+            Contact
+          </button>
         </div>
       </motion.article>
     </>

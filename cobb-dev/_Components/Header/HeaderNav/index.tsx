@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { IHandleProps } from 'Types/type';
 import styles from './headerNav.module.scss';
 
 const NAV_ITEMS = [
@@ -6,16 +7,28 @@ const NAV_ITEMS = [
   { title: '# BLOG', path: '/blog-description' },
 ];
 
-const HeaderNav = () => {
+const HeaderNav = ({ handleCloseMenu }: IHandleProps) => {
+  const router = useRouter();
+
+  const handleNavigateAndCloseMenu = (url: string) => {
+    router.push(url);
+    handleCloseMenu();
+  };
+
   return (
     <nav className={styles.sidebarNavContainer}>
       <ul>
         {NAV_ITEMS.map((list) => (
-          <Link href={list.path}>
-            <a>
-              <li>{list.title}</li>
-            </a>
-          </Link>
+          <li>
+            <button
+              type='button'
+              onClick={() => {
+                handleNavigateAndCloseMenu(list.path);
+              }}
+            >
+              {list.title}
+            </button>
+          </li>
         ))}
       </ul>
     </nav>

@@ -20,16 +20,16 @@
 }
 
 .headerIcon {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
   color: color.$MAIN_BLACK;
 
-  p:last-child {
-    margin-left: 5px;
+  button {
+    display: flex;
+    align-items: center;
     font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 1px;
+  }
+
+  svg {
+    margin-right: 8px;
   }
 }
 

@@ -44,7 +44,7 @@ const Owner_description = () => {
     return () => window.removeEventListener('scroll', scroll, false);
   }, []);
 
-  const Cards = CARD_PROPS.map((card) => <Card info={card} key={card.desc} />);
+  const Cards = CARD_PROPS.map((card, index) => <Card info={card} key={card.desc} index={index} />);
 
   return (
     <div className={styles.pageContainer}>
