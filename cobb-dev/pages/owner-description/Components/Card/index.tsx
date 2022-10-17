@@ -5,7 +5,6 @@ interface IInfoType {
   info: {
     title: string;
     desc: string;
-    index: number;
   };
   index: number;
 }
