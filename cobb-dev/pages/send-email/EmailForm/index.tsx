@@ -41,7 +41,7 @@ const EmailForm = () => {
   const handleChangeMessage = (e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.currentTarget.value);
 
   const notifyError = () =>
-    toast.error('Check your input.', {
+    toast.error('입력을 확인해주세요.', {
       position: 'bottom-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -52,7 +52,7 @@ const EmailForm = () => {
     });
 
   const notifySuccess = () =>
-    toast.success('Successfully sent.', {
+    toast.success('전송을 완료했습니다.', {
       position: 'bottom-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -122,7 +122,7 @@ const EmailForm = () => {
             onChange={handleChangeMessage}
           />
           <Button type='submit' variant='contained'>
-            <SendRoundedIcon /> Send Email
+            <SendRoundedIcon /> 메세지 전송
           </Button>
         </form>
       </div>

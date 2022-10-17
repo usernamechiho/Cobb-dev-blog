@@ -43,11 +43,7 @@ const Description = () => {
         viewport={{ once: true }}
         className={styles.intro}
       >
-        <p>
-          I'm an enthusiastic and collaborative Frontend Software Engineer seeking an entry-level position with company
-          to use my skills in coding, troubleshooting complex problems and assisting in the timley completion of
-          projects.
-        </p>
+        <p>안녕하세요, 주니어 프론트엔드 개발자 Cobb입니다. Entry-level FE position에 관심 있습니다.</p>
       </motion.div>
     </section>
   );

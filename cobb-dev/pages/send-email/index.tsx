@@ -13,7 +13,7 @@ function Send_email() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          Let's get to know each other.
+          이용에 불편하셨거나, 질문이 있으신가요?
         </motion.p>
       </section>
 
@@ -25,7 +25,7 @@ function Send_email() {
             transition={{ duration: 1, delay: 0.7 }}
             viewport={{ once: true }}
           >
-            I'd love to hear from you.
+            조금 더 자세히 듣고싶어요.
           </motion.p>
         </div>
 

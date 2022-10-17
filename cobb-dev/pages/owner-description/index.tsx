@@ -9,27 +9,27 @@ import Description from './Components/Description';
 const CARD_PROPS = [
   {
     title: 'Graduate of',
-    desc: 'SEOUL TECH (S.Korea)',
+    desc: '서울과학기술대학교 영어영문학',
   },
   {
     title: 'Tech Stacks',
-    desc: 'JavaScript, TypeScript, React, Next.js',
+    desc: 'TypeScript, React, Next.JS',
   },
   {
     title: 'Experience',
-    desc: 'A year experience in FE environment',
+    desc: '1년, 다수의 협업 프로젝트',
   },
   {
     title: 'Collaborative',
-    desc: 'Love to work as a team',
+    desc: '혼자보단 같이',
   },
   {
     title: 'Flexible',
-    desc: 'Follow rules & No insist things',
+    desc: '유연하게, 상황에 따라',
   },
   {
     title: 'Straightforward',
-    desc: 'Straight opinions for better service',
+    desc: '객관적으로, 솔직하게',
   },
 ];
 

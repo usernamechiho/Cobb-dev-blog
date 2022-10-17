@@ -36,13 +36,13 @@
 
 .typewriter {
   div {
-    margin: 100px 0;
+    margin: 120px 0;
     font-family: sub-font, sans-serif;
     font-size: 30px;
     background: color.$MAIN_WHITE;
 
     @include responsive.after(MD) {
-      margin: 150px 0;
+      margin: 190px 0;
       font-size: 75px;
     }
   }
@@ -50,8 +50,13 @@
 
 .descriptionContainer {
   width: 90%;
-  height: 870px;
+  height: 580px;
   text-align: justify;
+
+  @include responsive.after(MD) {
+    width: 50%;
+    height: 420px;
+  }
 
   p {
     font-size: 12px;
@@ -66,11 +71,6 @@
   }
 
   p:not(p:first-child) {
-    margin-top: 40px;
-  }
-
-  @include responsive.after(MD) {
-    width: 50%;
-    height: 650px;
+    margin-top: 60px;
   }
 }

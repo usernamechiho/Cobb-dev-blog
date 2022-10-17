@@ -34,20 +34,19 @@ const blog_description = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          At first, I used various blog platforms on the internet to write down my learnings. In time, I was bored with
-          it. Using blog platforms, all I did was make an account, name a blog and make postings. Though I was able to
-          create a blog and have people visiting my posts, I started thinking of having a privately owned blog.
+          이 블로그를 개설하기 전, 다양한 블로그 플랫폼을 사용해봤습니다. 시간이 지날수록 블로그 플랫폼 사용이
+          지루해져갔습니다. 모든 과정이 단순했습니다. 편했지만 내 블로그가 있었으면 좋겠단 생각이 들었습니다.
         </motion.p>
         <p>
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            I was not trying to build the best blog platform. It is all about interests and needs. I solely plan,
-            design, build and deploy Cobb-dev. My blog might not provide better services compared to other blog
-            platforms.
+            제 목적은 최고의 블로그를 만드는 게 아니었습니다. 단순한 필요성과 흥미에 이끌려 만들었습니다. 처음부터 계획,
+            디자인, 개발부터 배포까지 스스로 관리했습니다. Cobb.dev 블로그는 다른 블로그 플랫폼과 비교했을 때, 더 나은
+            기능을 제공하지 않을 수 있습니다.
           </motion.span>
           <motion.span
             initial={{ opacity: 0 }}
@@ -56,29 +55,18 @@ const blog_description = () => {
             viewport={{ once: true }}
           >
             {' '}
-            But having a self-controlled blog feels different.
+            하지만 나만의 블로그를 소유하는 건 색다른 느낌을 줍니다.
           </motion.span>
         </p>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: 2.5 }}
           viewport={{ once: true }}
         >
-          I made my blog to document my journey as a developer. When I write what I know and inform others, it will also
-          make me better at the thing I write about. Because if I am teaching someone I must understand stuff. Moreover,
-          there is no correct answer in Coding. Every written code can't remain static and used in different situations.
-          It depends on how we use it, when to use it and where to use it.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-        >
-          Blogging is like keeping a diary. That way I can transcribe what I know and what I don’t. And if I am feeling
-          lost and I don’t remember what I did before to solve a problem of the same matter, I can go through my blog
-          and find the solution by myself. A real-time saver instead of scrolling through Google and StackOverflow.
+          개발엔 정답이 없습니다. 모든 코드는 고정된 상태로 사용되지 않습니다. 어떻게, 언제, 어디에 사용하냐에 따라
+          정답같은 코드도 오답처럼 보이곤 합니다. 그래서 코드를 기억하기보단 원론을 기록하고 이해하기 위해서 블로그가
+          필요했습니다. 개발자로써의 여정에 도움이 될 참고서가 되면 좋겠습니다.
         </motion.p>
       </section>
     </div>

@@ -2,7 +2,7 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 
-const DAILY_STEP = ['Wake up', 'Start coding', 'Sleep in'];
+const DAILY_STEP = ['기상', '코딩', '취침'];
 
 function DailyStepper() {
   return (

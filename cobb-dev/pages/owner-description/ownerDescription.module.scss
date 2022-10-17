@@ -52,12 +52,12 @@
   position: sticky;
   z-index: 2;
   flex-direction: column;
-  height: 2300px;
+  height: 2230px;
   padding-top: 65px;
   background: color.$MAIN_WHITE;
 
   @include responsive.after(MD) {
-    height: 2050px;
+    height: 2150px;
   }
 
   .stepperContainer {
@@ -86,6 +86,7 @@
   .cardContainer {
     @include flexbox.flexbox(start, center);
     flex-direction: column;
+    margin-top: 50px;
 
     @include responsive.after(MD) {
       display: grid;
