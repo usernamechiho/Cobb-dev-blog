@@ -19,7 +19,7 @@ function Header() {
   const handleCloseMenu = () => setIsMenu(false);
 
   const handleRoutingToMainPage = () => {
-    router.push('/');
+    router.push('/blog');
     handleCloseMenu();
   };
 
