@@ -11,8 +11,6 @@ function Blog({ posts }: any) {
       <h1>Published posts</h1>
 
       <Posts articles={articles} />
-
-      {false && <div>헤응</div>}
     </div>
   );
 }

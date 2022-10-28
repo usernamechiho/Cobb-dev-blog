@@ -1,0 +1,14 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+.postContainer {
+  margin-top: 50px;
+}
+
+.postBox {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+}
