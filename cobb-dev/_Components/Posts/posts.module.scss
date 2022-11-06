@@ -33,6 +33,10 @@
     margin-top: 50px;
   }
 
+  &:last-child {
+    margin-bottom: 50px;
+  }
+
   @include responsive.after(LD) {
     border-top: 0.5px solid color.$MAIN_BORDER;
     border-bottom: 0.5px solid color.$MAIN_BORDER;

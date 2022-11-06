@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import dayjs from 'dayjs';
+import Link from 'next/link';
 import styles from './posts.module.scss';
 
 const Posts = ({ articles }: any) => {
@@ -10,21 +11,31 @@ const Posts = ({ articles }: any) => {
       {articles.map((article: any) => {
         const src = `${process.env.NEXT_PUBLIC_BASE_URL}${article.attributes.thumbnail.data[0].attributes.url}`;
         const publishedDate = dayjs(articles[0].attributes.publishedAt).format('MMM DD, YYYY');
+        const { tag } = article.attributes.tag.data.attributes;
 
         return (
-          <div className={styles.postBox}>
-            <div className={styles.imageContainer}>
-              <Image loader={() => src} src={src} layout='fill' />
-            </div>
+          <Link
+            href={{
+              pathname: `/blog/${article.id}`,
+              query: { title: article.attributes.title },
+            }}
+          >
+            <div className={styles.postBox}>
+              <div className={styles.imageContainer}>
+                <Image loader={() => src} src={src} layout='fill' />
+              </div>
 
-            <div className={styles.listBlock} />
+              <div className={styles.listBlock} />
 
-            <div className={styles.contentContainer}>
-              <h2>{article.attributes.title}</h2>
-              <div className={styles.subtitle}>{article.attributes.subtitle}</div>
-              <div className={styles.dateAndTag}>{publishedDate}</div>
+              <div className={styles.contentContainer}>
+                <h2>{article.attributes.title}</h2>
+                <div className={styles.subtitle}>{article.attributes.subtitle}</div>
+                <div className={styles.dateAndTag}>
+                  <span>{tag}</span> - {publishedDate}
+                </div>
+              </div>
             </div>
-          </div>
+          </Link>
         );
       })}
     </main>

@@ -16,7 +16,9 @@ function Blog({ posts }: any) {
 }
 
 export async function getStaticProps() {
-  const posts = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/articles?populate[0]=thumbnail`);
+  const posts = await axios.get(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/articles?populate[0]=thumbnail&populate[1]=tag`
+  );
 
   return { props: { posts: posts.data } };
 }
