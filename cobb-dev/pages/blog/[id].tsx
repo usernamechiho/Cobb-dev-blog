@@ -2,7 +2,6 @@
 import axios from 'axios';
 import { dateFormat } from '_Utils/Helper';
 import MarkdownRenderer from '_Components/MarkdownRenderer';
-import { useState } from 'react';
 import styles from './blog.module.scss';
 
 const Article = ({ article }: any) => {
@@ -15,7 +14,9 @@ const Article = ({ article }: any) => {
         <h1>{article.data.attributes.title}</h1>
         <p className={styles.publishedDate}>{dateFormat(article.data.attributes.publishedAt)}</p>
       </div>
-      <main>h</main>
+      <main>
+        <MarkdownRenderer markdown={article.data.attributes.content} />
+      </main>
     </div>
   );
 };

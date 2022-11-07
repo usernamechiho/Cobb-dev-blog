@@ -28,7 +28,7 @@ function Header() {
       <header className={styles.headerComponent}>
         <div className={styles.headerIcon}>
           <button type='button' onClick={handleRoutingToMainPage}>
-            <WorkspacesOutlinedIcon /> Cobb.dev
+            <WorkspacesOutlinedIcon /> Cobb
           </button>
         </div>
         <div className={styles.hamburgerContainer}>
