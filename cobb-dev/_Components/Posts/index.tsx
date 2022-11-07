@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import dayjs from 'dayjs';
 import Link from 'next/link';
+import { dateFormat } from '_Utils/Helper';
 import styles from './posts.module.scss';
 
 const Posts = ({ articles }: any) => {
@@ -10,7 +10,7 @@ const Posts = ({ articles }: any) => {
     <main className={styles.postContainer}>
       {articles.map((article: any) => {
         const src = `${process.env.NEXT_PUBLIC_BASE_URL}${article.attributes.thumbnail.data[0].attributes.url}`;
-        const publishedDate = dayjs(articles[0].attributes.publishedAt).format('MMM DD, YYYY');
+        const publishedDate = dateFormat(articles[0].attributes.publishedAt);
         const { tag } = article.attributes.tag.data.attributes;
 
         return (

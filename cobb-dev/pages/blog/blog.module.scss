@@ -1,0 +1,55 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+@font-face {
+  font-family: barcode-font;
+  src: url('../../public/fonts/LibreBarcode39Text-Regular.ttf');
+  font-display: swap;
+}
+
+.container {
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background: color.$MAIN_WHITE;
+  @include flexbox.flexbox(center, center);
+
+  .header {
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+    line-height: 30px;
+    word-break: keep-all;
+
+    @include responsive.after(MD) {
+      width: 60%;
+      margin-top: 80px;
+    }
+
+    .tag {
+      font-family: barcode-font, sans-serif;
+      font-size: 40px;
+      text-align: center;
+
+      @include responsive.after(MD) {
+        font-size: 70px;
+      }
+    }
+
+    h1 {
+      margin-top: 40px;
+      line-height: 45px;
+
+      @include responsive.after(MD) {
+        margin-top: 60px;
+      }
+    }
+
+    .publishedDate {
+      margin-top: 20px;
+      font-size: 14px;
+      color: color.$MAIN_LIGHT_GRAY;
+    }
+  }
+}
