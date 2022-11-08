@@ -50,12 +50,13 @@
 
 .descriptionContainer {
   width: 90%;
-  height: 580px;
+  height: auto;
+  margin-bottom: 30px;
   text-align: justify;
 
   @include responsive.after(MD) {
     width: 50%;
-    height: 420px;
+    height: auto;
   }
 
   p {

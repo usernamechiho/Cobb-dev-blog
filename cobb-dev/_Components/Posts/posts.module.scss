@@ -11,7 +11,7 @@
 .postContainer {
   flex-direction: column;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 70px;
   @include flexbox.flexbox(center, center);
 
   @include responsive.after(LD) {

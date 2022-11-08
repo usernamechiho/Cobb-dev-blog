@@ -18,7 +18,7 @@
   .header {
     width: 90%;
     height: auto;
-    margin-top: 30px;
+    margin-top: 0;
     line-height: 30px;
     word-break: keep-all;
 
@@ -56,22 +56,13 @@
   main {
     width: 90%;
     height: auto;
-    margin-top: 30px;
+    margin: 30px 0;
     line-height: 30px;
     word-break: keep-all;
 
     @include responsive.after(MD) {
       width: 60%;
-      margin-top: 80px;
+      margin: 60px 0 30px;
     }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: color.$MAIN_GRAY;
   }
 }

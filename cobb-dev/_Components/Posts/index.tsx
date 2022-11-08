@@ -12,6 +12,7 @@ const Posts = ({ articles }: any) => {
         const src = `${process.env.NEXT_PUBLIC_BASE_URL}${article.attributes.thumbnail.data[0].attributes.url}`;
         const publishedDate = dateFormat(articles[0].attributes.publishedAt);
         const { tag } = article.attributes.tag.data.attributes;
+        const key = article.attributes.title;
 
         return (
           <Link
@@ -20,7 +21,7 @@ const Posts = ({ articles }: any) => {
               query: { title: article.attributes.title },
             }}
           >
-            <div className={styles.postBox}>
+            <div className={styles.postBox} key={key}>
               <div className={styles.imageContainer}>
                 <Image loader={() => src} src={src} layout='fill' />
               </div>

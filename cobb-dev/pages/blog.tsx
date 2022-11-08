@@ -1,13 +1,16 @@
 import Posts from '_Components/Posts';
 import axios from 'axios';
+import dayjs from 'dayjs';
 import styles from './blog.module.scss';
 
 function Blog({ posts }: any) {
   const articles = posts.data.reverse();
 
+  const today = dayjs().format('MMMM DD, YYYY');
+
   return (
     <div className={styles.blogContainer}>
-      <p>OCTOBER 01, 2022 — BY COBB</p>
+      <p>{today} — BY COBB</p>
       <h1>Published posts</h1>
 
       <Posts articles={articles} />

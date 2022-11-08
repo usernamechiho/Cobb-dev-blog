@@ -6,6 +6,8 @@ import Header from '_Components/Header';
 import ProgressBar from '_Components/ProgressBar';
 import Loading from '_Components/Loading';
 import Modal from '_Components/Modal';
+import Head from 'next/head';
+import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
 
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -32,6 +34,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <RecoilRoot>
+      <Head>
+        <link rel='shortcut icon' href='/imgs/dots.ico' />
+        <title>Cobb-dev</title>
+      </Head>
       {isLoading && (
         <Modal>
           <Loading />

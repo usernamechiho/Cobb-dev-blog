@@ -20,6 +20,7 @@
     font-family: sub-font, sans-serif;
     font-size: 15px;
     color: color.$MAIN_LIGHT_GRAY;
+    text-transform: uppercase;
     word-spacing: 1px;
 
     @include responsive.after(MD) {
