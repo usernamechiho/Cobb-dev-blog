@@ -7,7 +7,8 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import styles from './markdown.module.scss';
 
-const MarkdownRenderer = ({ markdown }: any) => {
+// eslint-disable-next-line react/prop-types
+const MarkdownRenderer = ({ markdown }) => {
   return (
     <ReactMarkdown
       children={markdown}

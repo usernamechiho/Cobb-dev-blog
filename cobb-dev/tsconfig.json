@@ -16,6 +16,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "styles/_Global/index.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "styles/_Global/index.js",
+    "_Components/MarkdownRenderer/index.js"
+  ],
   "exclude": ["node_modules"]
 }
