@@ -18,9 +18,9 @@ const Card = ({ info, index }: IInfoType) => {
       transition={{ duration: 1, delay: index / 2 }}
       viewport={{ once: true }}
     >
-      <h1>{info.title}</h1>
+      <h1>{info?.title}</h1>
       <div />
-      <p>{info.desc}</p>
+      <p>{info?.desc}</p>
     </motion.div>
   );
 };

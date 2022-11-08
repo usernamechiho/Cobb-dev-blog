@@ -4,8 +4,6 @@ import { dateFormat } from '_Utils/Helper';
 import styles from './posts.module.scss';
 
 const Posts = ({ articles }: any) => {
-  console.log(articles);
-
   return (
     <main className={styles.postContainer}>
       {articles.map((article: any) => {

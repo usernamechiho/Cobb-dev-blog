@@ -2,14 +2,11 @@
 import axios from 'axios';
 import { dateFormat } from '_Utils/Helper';
 import MarkdownRenderer from '_Components/MarkdownRenderer';
-import Head from 'next/head';
 import HeadMeta from '_Components/HeadMeta';
 import styles from './blog.module.scss';
 import 'github-markdown-css/github-markdown-light.css';
 
 const Article = ({ article }: any) => {
-  console.log(article);
-
   return (
     <>
       <HeadMeta
