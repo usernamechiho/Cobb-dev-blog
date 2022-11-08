@@ -1,5 +1,6 @@
+// eslint-disable-next-line import/no-absolute-path
+import chiho from '/public/imgs/chiho.jpg';
 import { motion } from 'framer-motion';
-import chiho from '../../../../public/imgs/chiho.jpg';
 import styles from './description.module.scss';
 
 const Description = () => {
