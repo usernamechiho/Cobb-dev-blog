@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import chiho from 'public/imgs/chiho.jpg';
+import chiho from 'public/imgs/chiho1.jpg';
 import styles from './description.module.scss';
 
 const Description = () => {
