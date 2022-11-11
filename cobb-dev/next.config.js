@@ -8,6 +8,14 @@ module.exports = {
   images: {
     domains: ['localhost', 'localhost:1337'],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:1337/:path*',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
