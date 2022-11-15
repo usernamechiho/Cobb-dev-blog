@@ -2,6 +2,12 @@
 @use 'styles/_Global/responsive.scss';
 @use 'styles/_Global/z-index.scss';
 
+@font-face {
+  font-family: bold-font;
+  src: url('../../public/fonts/Pretendard-Bold.ttf');
+  font-display: swap;
+}
+
 .headerComponent {
   position: sticky;
   top: 0;
@@ -26,10 +32,12 @@
     display: flex;
     align-items: center;
     font-size: 20px;
+    color: color.$MAIN_BLACK !important;
   }
 
-  svg {
-    margin-right: 10px;
+  span {
+    margin-left: 15px;
+    font-family: bold-font, sans-serif;
   }
 }
 

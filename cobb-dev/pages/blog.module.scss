@@ -12,7 +12,8 @@
   @include flexbox.flexbox(start, center);
   flex-direction: column;
   min-width: 350px;
-  height: calc(100vh - 65px);
+  height: auto;
+  overflow: scroll;
   background: color.$MAIN_WHITE;
 
   p {

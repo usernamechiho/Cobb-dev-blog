@@ -4,6 +4,20 @@ exports.id = 888;
 exports.ids = [888,440];
 exports.modules = {
 
+/***/ 422:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"footer": "footer_footer__HjUou",
+	"left": "footer_left__mL1Sl",
+	"right": "footer_right__qHbAS",
+	"github": "footer_github__DYALI"
+};
+
+
+/***/ }),
+
 /***/ 2015:
 /***/ ((module) => {
 
@@ -88,6 +102,76 @@ module.exports = {
 
 /***/ }),
 
+/***/ 7702:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": () => (/* binding */ _Components_Footer)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+;// CONCATENATED MODULE: external "@mui/icons-material/Instagram"
+const Instagram_namespaceObject = require("@mui/icons-material/Instagram");
+var Instagram_default = /*#__PURE__*/__webpack_require__.n(Instagram_namespaceObject);
+;// CONCATENATED MODULE: external "@mui/icons-material/GitHub"
+const GitHub_namespaceObject = require("@mui/icons-material/GitHub");
+var GitHub_default = /*#__PURE__*/__webpack_require__.n(GitHub_namespaceObject);
+// EXTERNAL MODULE: external "@mui/material/Tooltip"
+var Tooltip_ = __webpack_require__(7229);
+var Tooltip_default = /*#__PURE__*/__webpack_require__.n(Tooltip_);
+// EXTERNAL MODULE: ./_Components/Footer/footer.module.scss
+var footer_module = __webpack_require__(422);
+var footer_module_default = /*#__PURE__*/__webpack_require__.n(footer_module);
+;// CONCATENATED MODULE: ./_Components/Footer/index.tsx
+
+
+
+
+
+const Footer = ()=>{
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("footer", {
+        className: (footer_module_default()).footer,
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (footer_module_default()).left,
+                children: "ⓒ Cobb reserves all rights."
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: (footer_module_default()).right,
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx((Tooltip_default()), {
+                        title: "Open Instagram",
+                        children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                            target: "_blank",
+                            href: "https://github.com/usernamechiho",
+                            rel: "noopener noreferrer",
+                            children: /*#__PURE__*/ jsx_runtime_.jsx((Instagram_default()), {})
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx((Tooltip_default()), {
+                        title: "Open Github",
+                        children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                            target: "_blank",
+                            href: "https://www.instagram.com/sinsastation/",
+                            rel: "noopener noreferrer",
+                            className: (footer_module_default()).github,
+                            children: /*#__PURE__*/ jsx_runtime_.jsx((GitHub_default()), {})
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+};
+/* harmony default export */ const _Components_Footer = (Footer);
+
+
+/***/ }),
+
 /***/ 1759:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -154,20 +238,20 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1853);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _mui_icons_material_WorkspacesOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(543);
-/* harmony import */ var _mui_icons_material_WorkspacesOutlined__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_mui_icons_material_WorkspacesOutlined__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3365);
-/* harmony import */ var _mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7229);
-/* harmony import */ var _mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7934);
-/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _Components_Sidebar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3832);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(6197);
+/* harmony import */ var _mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3365);
+/* harmony import */ var _mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7229);
+/* harmony import */ var _mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7934);
+/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Components_Sidebar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(3832);
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(6197);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(5675);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _header_module_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(8436);
 /* harmony import */ var _header_module_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_header_module_scss__WEBPACK_IMPORTED_MODULE_9__);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Components_Sidebar__WEBPACK_IMPORTED_MODULE_7__, framer_motion__WEBPACK_IMPORTED_MODULE_8__]);
-([_Components_Sidebar__WEBPACK_IMPORTED_MODULE_7__, framer_motion__WEBPACK_IMPORTED_MODULE_8__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Components_Sidebar__WEBPACK_IMPORTED_MODULE_6__, framer_motion__WEBPACK_IMPORTED_MODULE_7__]);
+([_Components_Sidebar__WEBPACK_IMPORTED_MODULE_6__, framer_motion__WEBPACK_IMPORTED_MODULE_7__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -198,26 +282,33 @@ function Header() {
                             type: "button",
                             onClick: handleRoutingToMainPage,
                             children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_icons_material_WorkspacesOutlined__WEBPACK_IMPORTED_MODULE_3___default()), {}),
-                                " Cobb"
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_8___default()), {
+                                    src: "/imgs/dots.png",
+                                    alt: "Cobb Logo",
+                                    width: "20px",
+                                    height: "20px"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                    children: "Cobb"
+                                })
                             ]
                         })
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                         className: (_header_module_scss__WEBPACK_IMPORTED_MODULE_9___default().hamburgerContainer),
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_5___default()), {
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_4___default()), {
                             title: "Menu",
-                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_6___default()), {
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5___default()), {
                                 "aria-label": "sidebar-open",
                                 onClick: handleOpenMenu,
-                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_4___default()), {})
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_3___default()), {})
                             })
                         })
                     })
                 ]
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_8__.AnimatePresence, {
-                children: isMenu && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Components_Sidebar__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_7__.AnimatePresence, {
+                children: isMenu && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Components_Sidebar__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {
                     handleCloseMenu: handleCloseMenu
                 })
             })
@@ -465,10 +556,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_Modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8523);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(968);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1853);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _Components_Footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7702);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Components_Header__WEBPACK_IMPORTED_MODULE_3__]);
 _Components_Header__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -482,10 +574,11 @@ _Components_Header__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies_
 
 
 
+
 function MyApp({ Component , pageProps  }) {
-    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_8__.useRouter)();
-    const { 0: isLoading , 1: setIsLoading  } = (0,react__WEBPACK_IMPORTED_MODULE_9__.useState)(false);
-    (0,react__WEBPACK_IMPORTED_MODULE_9__.useEffect)(()=>{
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_9__.useRouter)();
+    const { 0: isLoading , 1: setIsLoading  } = (0,react__WEBPACK_IMPORTED_MODULE_10__.useState)(false);
+    (0,react__WEBPACK_IMPORTED_MODULE_10__.useEffect)(()=>{
         const handleLoadingStart = (url)=>url !== router.asPath && setIsLoading(true);
         const handleLoadingComplete = (url)=>url === router.asPath && setIsLoading(false);
         router.events.on("routeChangeStart", handleLoadingStart);
@@ -519,7 +612,8 @@ function MyApp({ Component , pageProps  }) {
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
                     ...pageProps
                 })
-            })
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Components_Footer__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {})
         ]
     });
 }
@@ -538,14 +632,6 @@ module.exports = require("@mui/icons-material/Menu");
 
 /***/ }),
 
-/***/ 543:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("@mui/icons-material/WorkspacesOutlined");
-
-/***/ }),
-
 /***/ 7934:
 /***/ ((module) => {
 
@@ -559,6 +645,54 @@ module.exports = require("@mui/material/IconButton");
 
 "use strict";
 module.exports = require("@mui/material/Tooltip");
+
+/***/ }),
+
+/***/ 4957:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/head.js");
+
+/***/ }),
+
+/***/ 744:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config-context.js");
+
+/***/ }),
+
+/***/ 5843:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config.js");
+
+/***/ }),
+
+/***/ 8854:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-path.js");
+
+/***/ }),
+
+/***/ 3297:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slash.js");
+
+/***/ }),
+
+/***/ 9232:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
@@ -617,7 +751,7 @@ module.exports = import("framer-motion");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(5656));
+var __webpack_exports__ = __webpack_require__.X(0, [377,675], () => (__webpack_exec__(5656)));
 module.exports = __webpack_exports__;
 
 })();

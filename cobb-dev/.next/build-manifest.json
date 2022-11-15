@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/1u3llDo8s6lecaN4H3Luu/_buildManifest.js",
-    "static/1u3llDo8s6lecaN4H3Luu/_ssgManifest.js"
+    "static/4yjdNZWd7fk5Pvwb09KTS/_buildManifest.js",
+    "static/4yjdNZWd7fk5Pvwb09KTS/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -20,8 +20,8 @@
       "static/chunks/webpack-211c438de79acdca.js",
       "static/chunks/framework-4bae2c966b0001c5.js",
       "static/chunks/main-527f858260dc8159.js",
-      "static/css/586007e03e925754.css",
-      "static/chunks/pages/_app-4b0315063347a70c.js"
+      "static/css/e257012d5c63cca3.css",
+      "static/chunks/pages/_app-06e248455c7b31e3.js"
     ],
     "/_error": [
       "static/chunks/webpack-211c438de79acdca.js",
@@ -33,17 +33,15 @@
       "static/chunks/webpack-211c438de79acdca.js",
       "static/chunks/framework-4bae2c966b0001c5.js",
       "static/chunks/main-527f858260dc8159.js",
-      "static/chunks/675-b2f809d5e5e36abc.js",
-      "static/css/d6256f025b987de1.css",
-      "static/chunks/pages/blog-93505cc7de095fe3.js"
+      "static/css/f90d9f3cd3dc3aee.css",
+      "static/chunks/pages/blog-0e439f5af341dcb3.js"
     ],
     "/blog-description": [
       "static/chunks/webpack-211c438de79acdca.js",
       "static/chunks/framework-4bae2c966b0001c5.js",
       "static/chunks/main-527f858260dc8159.js",
-      "static/chunks/675-b2f809d5e5e36abc.js",
       "static/css/cb28207b6bf9ceaf.css",
-      "static/chunks/pages/blog-description-95abf09271371be7.js"
+      "static/chunks/pages/blog-description-795c4ca4c54557fe.js"
     ],
     "/blog/[id]": [
       "static/chunks/webpack-211c438de79acdca.js",
@@ -58,7 +56,7 @@
       "static/chunks/framework-4bae2c966b0001c5.js",
       "static/chunks/main-527f858260dc8159.js",
       "static/chunks/658-d4b777fb5a7ce338.js",
-      "static/css/dfceb18c64d36990.css",
+      "static/css/0c778131b4dfdf23.css",
       "static/chunks/pages/owner-description-6d44fe4769d08242.js"
     ],
     "/owner-description/Components/Arrow": [

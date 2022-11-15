@@ -7,7 +7,7 @@ import ProgressBar from '_Components/ProgressBar';
 import Loading from '_Components/Loading';
 import Modal from '_Components/Modal';
 import Head from 'next/head';
-import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
+import Footer from '_Components/Footer';
 
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -48,6 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <Footer />
     </RecoilRoot>
   );
 }

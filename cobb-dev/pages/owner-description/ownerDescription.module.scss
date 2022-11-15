@@ -54,6 +54,7 @@
   flex-direction: column;
   height: 2230px;
   padding-top: 65px;
+  overflow-y: scroll;
   background: color.$MAIN_WHITE;
 
   @include responsive.after(MD) {
