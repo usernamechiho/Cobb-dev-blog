@@ -183,7 +183,8 @@ async function getStaticProps() {
     return {
         props: {
             posts: posts.data
-        }
+        },
+        revalidate: 10
     };
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Blog);
