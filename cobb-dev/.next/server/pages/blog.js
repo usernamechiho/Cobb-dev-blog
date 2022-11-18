@@ -105,8 +105,8 @@ const Posts = ({ articles  })=>{
                             ]
                         })
                     ]
-                }, key)
-            });
+                })
+            }, key);
         })
     });
 };
@@ -158,7 +158,7 @@ axios__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (awa
 
 
 function Blog({ posts  }) {
-    const articles = posts.data.reverse();
+    const articles = posts.data;
     const today = dayjs__WEBPACK_IMPORTED_MODULE_3___default()().format("MMMM DD, YYYY");
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_4___default().blogContainer),

@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/4yjdNZWd7fk5Pvwb09KTS/_buildManifest.js",
-    "static/4yjdNZWd7fk5Pvwb09KTS/_ssgManifest.js"
+    "static/8P0ra3qElrDDLV1yr9iSh/_buildManifest.js",
+    "static/8P0ra3qElrDDLV1yr9iSh/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -20,7 +20,7 @@
       "static/chunks/webpack-211c438de79acdca.js",
       "static/chunks/framework-4bae2c966b0001c5.js",
       "static/chunks/main-527f858260dc8159.js",
-      "static/css/e257012d5c63cca3.css",
+      "static/css/718a3d503b606289.css",
       "static/chunks/pages/_app-06e248455c7b31e3.js"
     ],
     "/_error": [
@@ -33,8 +33,8 @@
       "static/chunks/webpack-211c438de79acdca.js",
       "static/chunks/framework-4bae2c966b0001c5.js",
       "static/chunks/main-527f858260dc8159.js",
-      "static/css/f90d9f3cd3dc3aee.css",
-      "static/chunks/pages/blog-0e439f5af341dcb3.js"
+      "static/css/97821e86e9d3a20b.css",
+      "static/chunks/pages/blog-6d729e78f8d67316.js"
     ],
     "/blog-description": [
       "static/chunks/webpack-211c438de79acdca.js",
@@ -48,16 +48,16 @@
       "static/chunks/framework-4bae2c966b0001c5.js",
       "static/chunks/main-527f858260dc8159.js",
       "static/chunks/545-72f558804a00dd0b.js",
-      "static/css/5eecf8e67b9ed1b5.css",
-      "static/chunks/pages/blog/[id]-65d9d39e1e4c90eb.js"
+      "static/css/a3631b8d32627eff.css",
+      "static/chunks/pages/blog/[id]-5db4e66494f1bf9a.js"
     ],
     "/owner-description": [
       "static/chunks/webpack-211c438de79acdca.js",
       "static/chunks/framework-4bae2c966b0001c5.js",
       "static/chunks/main-527f858260dc8159.js",
       "static/chunks/658-d4b777fb5a7ce338.js",
-      "static/css/0c778131b4dfdf23.css",
-      "static/chunks/pages/owner-description-6d44fe4769d08242.js"
+      "static/css/2f7406f35df4b7db.css",
+      "static/chunks/pages/owner-description-ee17d3f50c26a8fa.js"
     ],
     "/owner-description/Components/Arrow": [
       "static/chunks/webpack-211c438de79acdca.js",
@@ -78,7 +78,8 @@
       "static/chunks/framework-4bae2c966b0001c5.js",
       "static/chunks/main-527f858260dc8159.js",
       "static/chunks/658-d4b777fb5a7ce338.js",
-      "static/chunks/pages/owner-description/Components/DailyStepper-d589235c5e34d0b9.js"
+      "static/css/46785b0338d89e0e.css",
+      "static/chunks/pages/owner-description/Components/DailyStepper-a021200a017446d6.js"
     ],
     "/owner-description/Components/Description": [
       "static/chunks/webpack-211c438de79acdca.js",

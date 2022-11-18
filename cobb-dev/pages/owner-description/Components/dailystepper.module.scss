@@ -1,0 +1,14 @@
+@use 'styles/_Global/color.scss';
+
+.stepper {
+  circle {
+    margin: 10px 0;
+    color: color.$MAIN_BLACK;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    color: color.$MAIN_BLACK;
+  }
+}

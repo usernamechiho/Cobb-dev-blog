@@ -18,8 +18,9 @@ const Posts = ({ articles }: any) => {
               pathname: `/blog/${article.id}`,
               query: { title: article.attributes.title },
             }}
+            key={key}
           >
-            <div className={styles.postBox} key={key}>
+            <div className={styles.postBox}>
               <div className={styles.imageContainer}>
                 <Image loader={() => src} src={src} layout='fill' />
               </div>

@@ -18,7 +18,7 @@ const Article = ({ article }: any) => {
         <div className={styles.header}>
           <p className={styles.tag}>{article.data.attributes.tag.data.attributes.tag}</p>
           <h1>{article.data.attributes.title}</h1>
-          <p className={styles.publishedDate}>{dateFormat(article.data.attributes.publishedAt)}</p>
+          <p className={styles.publishedDate}>Published At {dateFormat(article.data.attributes.publishedAt)}</p>
         </div>
         <main
           className='markdown-body'

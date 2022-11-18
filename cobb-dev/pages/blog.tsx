@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import styles from './blog.module.scss';
 
 function Blog({ posts }: any) {
-  const articles = posts.data.reverse();
+  const articles = posts.data;
 
   const today = dayjs().format('MMMM DD, YYYY');
 
