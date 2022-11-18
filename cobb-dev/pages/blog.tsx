@@ -1,12 +1,25 @@
 import Posts from '_Components/Posts';
 import axios from 'axios';
 import dayjs from 'dayjs';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import styles from './blog.module.scss';
 
 function Blog({ posts }: any) {
   const articles = posts.data;
 
   const today = dayjs().format('MMMM DD, YYYY');
+
+  const router = useRouter();
+
+  const refreshData = () => {
+    router.replace(router.asPath);
+  };
+
+  useEffect(() => {
+    refreshData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className={styles.blogContainer}>

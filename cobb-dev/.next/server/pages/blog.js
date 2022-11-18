@@ -148,10 +148,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9648);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1635);
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _blog_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4960);
-/* harmony import */ var _blog_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_blog_module_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _blog_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4960);
+/* harmony import */ var _blog_module_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_blog_module_scss__WEBPACK_IMPORTED_MODULE_6__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_2__]);
 axios__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
 
 
 
@@ -160,8 +166,16 @@ axios__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (awa
 function Blog({ posts  }) {
     const articles = posts.data;
     const today = dayjs__WEBPACK_IMPORTED_MODULE_3___default()().format("MMMM DD, YYYY");
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_4__.useRouter)();
+    const refreshData = ()=>{
+        router.replace(router.asPath);
+    };
+    (0,react__WEBPACK_IMPORTED_MODULE_5__.useEffect)(()=>{
+        refreshData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_4___default().blogContainer),
+        className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_6___default().blogContainer),
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                 children: [
@@ -407,6 +421,14 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 "use strict";
 module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 1853:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/router");
 
 /***/ }),
 
