@@ -1,6 +1,7 @@
 {
   "/_app": "pages/_app.js",
   "/api/hello": "pages/api/hello.js",
+  "/_error": "pages/_error.js",
   "/blog-description": "pages/blog-description.html",
   "/": "pages/index.html",
   "/owner-description/Components/Arrow": "pages/owner-description/Components/Arrow.html",
@@ -10,9 +11,8 @@
   "/owner-description": "pages/owner-description.html",
   "/send-email/EmailForm": "pages/send-email/EmailForm.html",
   "/send-email": "pages/send-email.html",
-  "/blog": "pages/blog.js",
-  "/_error": "pages/_error.js",
   "/blog/[id]": "pages/blog/[id].js",
+  "/blog": "pages/blog.js",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }

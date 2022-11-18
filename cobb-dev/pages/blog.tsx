@@ -23,7 +23,7 @@ export async function getStaticProps() {
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/articles?populate[0]=thumbnail&populate[1]=tag`
   );
 
-  return { props: { posts: posts.data }, revalidate: 10 };
+  return { props: { posts: posts.data } };
 }
 
 export default Blog;

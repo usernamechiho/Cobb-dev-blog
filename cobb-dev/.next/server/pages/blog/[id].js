@@ -248,7 +248,7 @@ async function getStaticPaths() {
         }));
     return {
         paths,
-        fallback: false
+        fallback: "blocking"
     };
 }
 async function getStaticProps(ctx) {
@@ -257,7 +257,8 @@ async function getStaticProps(ctx) {
     const article = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(`${"http://localhost:1337"}/api/articles/${id}?populate[1]=tag&populate[0]=thumbnail`);
     return {
         props: {
-            article: article.data
+            article: article.data,
+            revalidate: 5
         }
     };
 }
