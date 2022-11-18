@@ -42,7 +42,7 @@ export async function getStaticPaths() {
     params: { id: `${path.id}` },
   }));
 
-  return { paths, fallback: 'blocking' };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps(ctx: any) {
@@ -54,7 +54,7 @@ export async function getStaticProps(ctx: any) {
   );
 
   return {
-    props: { article: article.data, revalidate: 5 },
+    props: { article: article.data },
   };
 }
 
