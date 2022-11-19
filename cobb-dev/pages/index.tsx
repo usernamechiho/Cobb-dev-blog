@@ -1,8 +1,5 @@
-import { useEffect } from 'react';
-import axios from 'axios';
-
 function Home() {
-  return <div>404</div>;
+  return <div>404 Error</div>;
 }
 
 export default Home;
