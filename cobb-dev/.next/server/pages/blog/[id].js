@@ -217,7 +217,7 @@ const Article = ({ article  })=>{
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                                 className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_5___default().publishedDate),
                                 children: [
-                                    "Published At ",
+                                    "Published at ",
                                     (0,_Utils_Helper__WEBPACK_IMPORTED_MODULE_2__/* .dateFormat */ .v)(article.data.attributes.publishedAt)
                                 ]
                             })
