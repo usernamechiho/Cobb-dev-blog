@@ -12,7 +12,7 @@ const Article = ({ article }: any) => {
       <HeadMeta
         title={article.data.attributes.title}
         description={article.data.attributes.subtitle}
-        image={article.data.attributes.thumbnail.data[0].attributes.url}
+        image={article.data.attributes.thumbnail.data.attributes.url}
       />
       <div className={styles.container}>
         <div className={styles.header}>

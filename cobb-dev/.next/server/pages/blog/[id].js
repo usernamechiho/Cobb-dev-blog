@@ -70,7 +70,7 @@ const HeadMeta = ({ title , description , url , image  })=>{
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "og:image",
-                content: `${"http://localhost:1337"}${image}`
+                content: `${"https://cobb-dev-backend-u8nfg.ondigitalocean.app"}${image}`
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "og:article:author",
@@ -199,7 +199,7 @@ const Article = ({ article  })=>{
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Components_HeadMeta__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
                 title: article.data.attributes.title,
                 description: article.data.attributes.subtitle,
-                image: article.data.attributes.thumbnail.data[0].attributes.url
+                image: article.data.attributes.thumbnail.data.attributes.url
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                 className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_5___default().container),
@@ -240,7 +240,7 @@ const Article = ({ article  })=>{
     });
 };
 async function getStaticPaths() {
-    const articlePaths = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(`${"http://localhost:1337"}/api/articles/?populate[0]=*`);
+    const articlePaths = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(`${"https://cobb-dev-backend-u8nfg.ondigitalocean.app"}/api/articles/?populate[0]=*`);
     const paths = articlePaths.data.data.map((path)=>({
             params: {
                 id: `${path.id}`
@@ -254,7 +254,7 @@ async function getStaticPaths() {
 async function getStaticProps(ctx) {
     const { params  } = ctx;
     const { id  } = params;
-    const article = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(`${"http://localhost:1337"}/api/articles/${id}?populate[1]=tag&populate[0]=thumbnail`);
+    const article = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(`${"https://cobb-dev-backend-u8nfg.ondigitalocean.app"}/api/articles/${id}?populate[1]=tag&populate[0]=thumbnail`);
     return {
         props: {
             article: article.data

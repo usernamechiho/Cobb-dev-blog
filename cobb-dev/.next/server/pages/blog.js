@@ -57,8 +57,8 @@ const Posts = ({ articles  })=>{
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("main", {
         className: (_posts_module_scss__WEBPACK_IMPORTED_MODULE_4___default().postContainer),
         children: articles.map((article)=>{
-            const src = `${"http://localhost:1337"}${article.attributes.thumbnail.data[0].attributes.url}`;
-            const publishedDate = (0,_Utils_Helper__WEBPACK_IMPORTED_MODULE_3__/* .dateFormat */ .v)(articles[0].attributes.publishedAt);
+            const src = `${"https://cobb-dev-backend-u8nfg.ondigitalocean.app"}${article.attributes.thumbnail.data.attributes.url}`;
+            const publishedDate = (0,_Utils_Helper__WEBPACK_IMPORTED_MODULE_3__/* .dateFormat */ .v)(article.attributes.publishedAt);
             const { tag  } = article.attributes.tag.data.attributes;
             const key = article.attributes.title;
             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
@@ -179,7 +179,7 @@ function Blog({ posts  }) {
     });
 }
 async function getStaticProps() {
-    const posts = await axios__WEBPACK_IMPORTED_MODULE_2__["default"].get(`${"http://localhost:1337"}/api/articles?populate[0]=thumbnail&populate[1]=tag`);
+    const posts = await axios__WEBPACK_IMPORTED_MODULE_2__["default"].get(`${"https://cobb-dev-backend-u8nfg.ondigitalocean.app"}/api/articles?populate[0]=thumbnail&populate[1]=tag`);
     return {
         props: {
             posts: posts.data
