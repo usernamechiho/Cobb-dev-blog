@@ -53,6 +53,7 @@
 
   button {
     font-size: 20px;
+    color: color.$MAIN_BLACK;
 
     @include responsive.after(MD) {
       font-size: 40px;

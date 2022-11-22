@@ -2,11 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-};
 
-module.exports = {
-  images: {
-    domains: ['localhost', 'localhost:1337'],
+  async rewrites() {
+    return [
+      {
+        destination: 'http://localhost:1337/:path*',
+        source: '/uploads/:path*',
+      },
+    ];
   },
 };
 

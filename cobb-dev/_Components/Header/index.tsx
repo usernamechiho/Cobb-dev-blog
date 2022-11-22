@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-
-import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import Sidebar from '_Components/Sidebar';
 import { AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 import styles from './header.module.scss';
 
@@ -28,7 +27,8 @@ function Header() {
       <header className={styles.headerComponent}>
         <div className={styles.headerIcon}>
           <button type='button' onClick={handleRoutingToMainPage}>
-            <WorkspacesOutlinedIcon /> Cobb
+            <Image src='/imgs/dots.png' alt='Cobb Logo' width='20px' height='20px' />
+            <span>Cobb</span>
           </button>
         </div>
         <div className={styles.hamburgerContainer}>

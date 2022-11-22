@@ -12,13 +12,13 @@ const Article = ({ article }: any) => {
       <HeadMeta
         title={article.data.attributes.title}
         description={article.data.attributes.subtitle}
-        image={article.data.attributes.thumbnail.data[0].attributes.url}
+        image={article.data.attributes.thumbnail.data.attributes.url}
       />
       <div className={styles.container}>
         <div className={styles.header}>
           <p className={styles.tag}>{article.data.attributes.tag.data.attributes.tag}</p>
           <h1>{article.data.attributes.title}</h1>
-          <p className={styles.publishedDate}>{dateFormat(article.data.attributes.publishedAt)}</p>
+          <p className={styles.publishedDate}>Published at {dateFormat(article.data.attributes.publishedAt)}</p>
         </div>
         <main
           className='markdown-body'
