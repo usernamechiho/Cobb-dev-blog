@@ -3,8 +3,13 @@ import axios from 'axios';
 import { dateFormat } from '_Utils/Helper';
 import MarkdownRenderer from '_Components/MarkdownRenderer';
 import HeadMeta from '_Components/HeadMeta';
+import dynamic from 'next/dynamic';
 import styles from './blog.module.scss';
 import 'github-markdown-css/github-markdown-light.css';
+
+const Comment = dynamic(() => import('_Components/Comment'), {
+  ssr: false,
+});
 
 const Article = ({ article }: any) => {
   return (
@@ -29,6 +34,7 @@ const Article = ({ article }: any) => {
           }}
         >
           <MarkdownRenderer markdown={article.data.attributes.content} />
+          <Comment />
         </main>
       </div>
     </>

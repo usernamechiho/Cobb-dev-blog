@@ -1,0 +1,7 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+
+.comment {
+  margin: 70px 0;
+  border-top: 0.5px solid color.$MAIN_BORDER;
+}

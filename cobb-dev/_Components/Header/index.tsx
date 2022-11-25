@@ -28,7 +28,7 @@ function Header() {
         <div className={styles.headerIcon}>
           <button type='button' onClick={handleRoutingToMainPage}>
             <Image src='/imgs/dots.png' alt='Cobb Logo' width='20px' height='20px' />
-            <span>Cobb</span>
+            <span>코브</span>
           </button>
         </div>
         <div className={styles.hamburgerContainer}>

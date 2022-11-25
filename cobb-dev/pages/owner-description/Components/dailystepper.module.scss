@@ -2,13 +2,13 @@
 
 .stepper {
   circle {
-    margin: 10px 0;
-    color: color.$MAIN_BLACK;
+    margin: 10px 0 !important;
+    color: color.$MAIN_BLACK !important;
   }
 
   span {
     font-size: 12px;
     font-weight: 500;
-    color: color.$MAIN_BLACK;
+    color: color.$MAIN_BLACK !important;
   }
 }

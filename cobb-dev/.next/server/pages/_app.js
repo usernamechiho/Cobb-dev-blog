@@ -289,7 +289,7 @@ function Header() {
                                     height: "20px"
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                    children: "Cobb"
+                                    children: "코브"
                                 })
                             ]
                         })

@@ -182,8 +182,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_Helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6177);
 /* harmony import */ var _Components_MarkdownRenderer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6888);
 /* harmony import */ var _Components_HeadMeta__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5975);
-/* harmony import */ var _blog_module_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6081);
-/* harmony import */ var _blog_module_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_blog_module_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5152);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _blog_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6081);
+/* harmony import */ var _blog_module_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_blog_module_scss__WEBPACK_IMPORTED_MODULE_6__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_1__, _Components_MarkdownRenderer__WEBPACK_IMPORTED_MODULE_3__]);
 ([axios__WEBPACK_IMPORTED_MODULE_1__, _Components_MarkdownRenderer__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 /* eslint-disable react/no-danger */ 
@@ -193,6 +195,15 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axio
 
 
 
+
+const Comment = next_dynamic__WEBPACK_IMPORTED_MODULE_5___default()(null, {
+    loadableGenerated: {
+        modules: [
+            "blog/[id].tsx -> " + "_Components/Comment"
+        ]
+    },
+    ssr: false
+});
 const Article = ({ article  })=>{
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
@@ -202,20 +213,20 @@ const Article = ({ article  })=>{
                 image: article.data.attributes.thumbnail.data.attributes.url
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_5___default().container),
+                className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_6___default().container),
                 children: [
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_5___default().header),
+                        className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_6___default().header),
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_5___default().tag),
+                                className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_6___default().tag),
                                 children: article.data.attributes.tag.data.attributes.tag
                             }),
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
                                 children: article.data.attributes.title
                             }),
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-                                className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_5___default().publishedDate),
+                                className: (_blog_module_scss__WEBPACK_IMPORTED_MODULE_6___default().publishedDate),
                                 children: [
                                     "Published at ",
                                     (0,_Utils_Helper__WEBPACK_IMPORTED_MODULE_2__/* .dateFormat */ .v)(article.data.attributes.publishedAt)
@@ -223,16 +234,19 @@ const Article = ({ article  })=>{
                             })
                         ]
                     }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("main", {
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
                         className: "markdown-body",
                         ref: (node)=>{
                             if (node) {
                                 node.style.setProperty("background", "#FCFDFC", "important");
                             }
                         },
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Components_MarkdownRenderer__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
-                            markdown: article.data.attributes.content
-                        })
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Components_MarkdownRenderer__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
+                                markdown: article.data.attributes.content
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Comment, {})
+                        ]
                     })
                 ]
             })
@@ -276,11 +290,27 @@ module.exports = require("dayjs");
 
 /***/ }),
 
+/***/ 5832:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/loadable.js");
+
+/***/ }),
+
 /***/ 968:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/head");
+
+/***/ }),
+
+/***/ 6689:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
 
 /***/ }),
 
@@ -347,7 +377,7 @@ module.exports = import("remark-gfm");;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(8694));
+var __webpack_exports__ = __webpack_require__.X(0, [152], () => (__webpack_exec__(8694)));
 module.exports = __webpack_exports__;
 
 })();

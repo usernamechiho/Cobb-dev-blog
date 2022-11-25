@@ -1882,5 +1882,12 @@
   "../node_modules/react-syntax-highlighter/dist/esm/prism-async.js -> refractor": {
     "id": 98695,
     "files": []
+  },
+  "blog/[id].tsx -> _Components/Comment": {
+    "id": 421,
+    "files": [
+      "static/css/7b599ae88b70a8b3.css",
+      "static/chunks/421.7103bfbc666215eb.js"
+    ]
   }
 }
