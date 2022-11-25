@@ -1,7 +1,7 @@
 (() => {
 var exports = {};
 exports.id = 888;
-exports.ids = [888,440];
+exports.ids = [888,432,440];
 exports.modules = {
 
 /***/ 422:
@@ -536,6 +536,32 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 1474:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LV": () => (/* binding */ pageview),
+/* harmony export */   "vt": () => (/* binding */ GA_TRACKING_ID)
+/* harmony export */ });
+/* unused harmony export event */
+const GA_TRACKING_ID = "G-HJTPKLBL2C";
+const pageview = (url)=>{
+    window.gtag("config", "G-HJTPKLBL2C", {
+        page_path: url
+    });
+};
+const event = ({ action , category , label , value  })=>{
+    window.gtag("event", action, {
+        event_category: category,
+        event_label: label,
+        value
+    });
+};
+
+
+/***/ }),
+
 /***/ 5656:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -557,10 +583,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(968);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _Components_Footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7702);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(1853);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(4298);
+/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_script__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var lib_gtag_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(1474);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_11__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Components_Header__WEBPACK_IMPORTED_MODULE_3__]);
 _Components_Header__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -575,10 +604,12 @@ _Components_Header__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies_
 
 
 
+
+
 function MyApp({ Component , pageProps  }) {
-    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_9__.useRouter)();
-    const { 0: isLoading , 1: setIsLoading  } = (0,react__WEBPACK_IMPORTED_MODULE_10__.useState)(false);
-    (0,react__WEBPACK_IMPORTED_MODULE_10__.useEffect)(()=>{
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_10__.useRouter)();
+    const { 0: isLoading , 1: setIsLoading  } = (0,react__WEBPACK_IMPORTED_MODULE_11__.useState)(false);
+    (0,react__WEBPACK_IMPORTED_MODULE_11__.useEffect)(()=>{
         const handleLoadingStart = (url)=>url !== router.asPath && setIsLoading(true);
         const handleLoadingComplete = (url)=>url === router.asPath && setIsLoading(false);
         router.events.on("routeChangeStart", handleLoadingStart);
@@ -590,13 +621,48 @@ function MyApp({ Component , pageProps  }) {
             router.events.off("routeChangeError", handleLoadingComplete);
         };
     });
+    (0,react__WEBPACK_IMPORTED_MODULE_11__.useEffect)(()=>{
+        const handleRouteChange = (url)=>{
+            lib_gtag_js__WEBPACK_IMPORTED_MODULE_12__/* .pageview */ .LV(url);
+        };
+        router.events.on("routeChangeComplete", handleRouteChange);
+        router.events.on("hashChangeComplete", handleRouteChange);
+        return ()=>{
+            router.events.off("routeChangeComplete", handleRouteChange);
+            router.events.off("hashChangeComplete", handleRouteChange);
+        };
+    }, [
+        router.events
+    ]);
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(recoil__WEBPACK_IMPORTED_MODULE_1__.RecoilRoot, {
         children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_9___default()), {
+                strategy: "afterInteractive",
+                src: `https://www.googletagmanager.com/gtag/js?id=${lib_gtag_js__WEBPACK_IMPORTED_MODULE_12__/* .GA_TRACKING_ID */ .vt}`
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_9___default()), {
+                id: "gtag-init",
+                strategy: "afterInteractive",
+                dangerouslySetInnerHTML: {
+                    __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${lib_gtag_js__WEBPACK_IMPORTED_MODULE_12__/* .GA_TRACKING_ID */ .vt}', {
+          page_path: window.location.pathname,
+        });
+      `
+                }
+            }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_7___default()), {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
                         rel: "shortcut icon",
                         href: "/imgs/dots.ico"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        name: "google-site-verification",
+                        content: "Ud8J6A_ISBf4lwJLP8q98U-YENsJ9-7fd8TJ8KB8iFg"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
                         children: "Cobb-dev"
@@ -624,6 +690,14 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 4298:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__(699)
+
+
+/***/ }),
+
 /***/ 3365:
 /***/ ((module) => {
 
@@ -645,6 +719,14 @@ module.exports = require("@mui/material/IconButton");
 
 "use strict";
 module.exports = require("@mui/material/Tooltip");
+
+/***/ }),
+
+/***/ 2796:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/head-manager-context.js");
 
 /***/ }),
 
@@ -751,7 +833,7 @@ module.exports = import("framer-motion");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [377,675], () => (__webpack_exec__(5656)));
+var __webpack_exports__ = __webpack_require__.X(0, [377,675,699], () => (__webpack_exec__(5656)));
 module.exports = __webpack_exports__;
 
 })();

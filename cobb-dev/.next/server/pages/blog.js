@@ -1,7 +1,7 @@
 (() => {
 var exports = {};
 exports.id = 195;
-exports.ids = [195];
+exports.ids = [195,432];
 exports.modules = {
 
 /***/ 1839:
@@ -440,7 +440,7 @@ module.exports = import("axios");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [377,675,952,664], () => (__webpack_exec__(4178)));
+var __webpack_exports__ = __webpack_require__.X(0, [377,675,699,676,664], () => (__webpack_exec__(4178)));
 module.exports = __webpack_exports__;
 
 })();

@@ -49,20 +49,16 @@
   @include flexbox.flexbox(start, center);
   position: relative;
   flex-direction: column;
-  height: 2350px;
+  height: auto;
   padding-top: 65px;
   background: color.$MAIN_WHITE;
-
-  @include responsive.after(MD) {
-    height: 2150px;
-  }
 
   .stepperContainer {
     position: sticky;
     top: 65px;
     z-index: 4;
     width: 100%;
-    height: 65px;
+    height: 60px;
     background: color.$MAIN_WHITE;
   }
 

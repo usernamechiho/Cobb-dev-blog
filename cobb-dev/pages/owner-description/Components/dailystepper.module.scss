@@ -1,14 +1,64 @@
+// @use 'styles/_Global/color.scss';
+
+// .stepper {
+//   circle {
+//     margin: 10px 0 !important;
+//     color: color.$MAIN_BLACK !important;
+//   }
+
+//   span {
+//     font-size: 12px;
+//     font-weight: 500;
+//     color: color.$MAIN_BLACK;
+//   }
+// }
+
 @use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
 
-.stepper {
-  circle {
-    margin: 10px 0 !important;
-    color: color.$MAIN_BLACK !important;
+.container {
+  width: 100%;
+  height: auto;
+
+  section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
-  span {
+  div {
+    @include flexbox.flexbox(center, center);
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    color: color.$MAIN_WHITE;
+    background: color.$MAIN_BLACK;
+    border-radius: 50%;
+  }
+
+  p {
+    margin-top: 15px;
     font-size: 12px;
-    font-weight: 500;
-    color: color.$MAIN_BLACK !important;
+    color: color.$MAIN_GRAY;
   }
+}
+
+.divider1,
+.divider2 {
+  position: absolute;
+  top: 12px;
+  z-index: -1;
+  width: 22%;
+  height: 1px;
+  background: color.$MAIN_BORDER;
+}
+
+.divider1 {
+  left: 22%;
+}
+
+.divider2 {
+  right: 22%;
 }
