@@ -1,5 +1,6 @@
 {
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/api/hello": "pages/api/hello.js",
   "/blog-description": "pages/blog-description.html",
   "/": "pages/index.html",
@@ -10,7 +11,6 @@
   "/owner-description": "pages/owner-description.html",
   "/send-email/EmailForm": "pages/send-email/EmailForm.html",
   "/send-email": "pages/send-email.html",
-  "/_error": "pages/_error.js",
   "/blog": "pages/blog.js",
   "/blog/[id]": "pages/blog/[id].js",
   "/_document": "pages/_document.js",
