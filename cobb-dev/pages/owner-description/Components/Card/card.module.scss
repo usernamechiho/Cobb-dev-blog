@@ -28,12 +28,6 @@
     font-size: 18px;
   }
 
-  .cardDivider {
-    width: 60%;
-    height: 0.1px;
-    background: color.$MAIN_LIGHT_GRAY;
-  }
-
   p {
     font-size: 13px;
     line-height: 30px;
@@ -41,4 +35,10 @@
     letter-spacing: 0.5px;
     word-spacing: 2px;
   }
+}
+
+.cardDivider {
+  width: 60%;
+  height: 0.1px;
+  background: color.$MAIN_LIGHT_GRAY;
 }

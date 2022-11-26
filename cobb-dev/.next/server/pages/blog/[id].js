@@ -61,6 +61,10 @@ const HeadMeta = ({ title , description , url , image  })=>{
                 content: title || "Cobb.dev"
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "og:description",
+                content: description || "프론트엔드에 관하여"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "og:type",
                 content: "website"
             }),
