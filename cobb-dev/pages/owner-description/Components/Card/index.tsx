@@ -19,7 +19,7 @@ const Card = ({ info, index }: IInfoType) => {
       viewport={{ once: true }}
     >
       <h1>{info?.title}</h1>
-      <div />
+      <div className={styles.cardDivider} />
       <p>{info?.desc}</p>
     </motion.div>
   );
