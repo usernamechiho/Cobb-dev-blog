@@ -54,9 +54,12 @@ module.exports = {
 
 
 const Posts = ({ articles  })=>{
+    const latestArticles = [
+        ...articles
+    ].reverse();
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("main", {
         className: (_posts_module_scss__WEBPACK_IMPORTED_MODULE_4___default().postContainer),
-        children: articles.map((article)=>{
+        children: latestArticles.map((article)=>{
             const src = `${"https://cobb-dev-backend-u8nfg.ondigitalocean.app"}${article.attributes.thumbnail.data.attributes.url}`;
             const publishedDate = (0,_Utils_Helper__WEBPACK_IMPORTED_MODULE_3__/* .dateFormat */ .v)(article.attributes.publishedAt);
             const { tag  } = article.attributes.tag.data.attributes;
@@ -126,7 +129,7 @@ const Posts = ({ articles  })=>{
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);
 
 const dateFormat = (date)=>{
-    return dayjs__WEBPACK_IMPORTED_MODULE_0___default()(date).format("MMM DD, YYYY");
+    return dayjs__WEBPACK_IMPORTED_MODULE_0___default()(date).format("MMM D, YYYY h:mm A");
 };
 
 

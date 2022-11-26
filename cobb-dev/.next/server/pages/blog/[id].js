@@ -159,7 +159,7 @@ __webpack_async_result__();
 /* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);
 
 const dateFormat = (date)=>{
-    return dayjs__WEBPACK_IMPORTED_MODULE_0___default()(date).format("MMM DD, YYYY");
+    return dayjs__WEBPACK_IMPORTED_MODULE_0___default()(date).format("MMM D, YYYY h:mm A");
 };
 
 

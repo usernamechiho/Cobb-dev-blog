@@ -19,7 +19,7 @@ const HeaderNav = ({ handleCloseMenu }: IHandleProps) => {
     <nav className={styles.sidebarNavContainer}>
       <ul>
         {NAV_ITEMS.map((list) => (
-          <li>
+          <li key={list.path}>
             <button
               type='button'
               onClick={() => {

@@ -1,6 +1,13 @@
 import Head from 'next/head';
 
-const HeadMeta = ({ title, description, url, image }: any) => {
+interface IMetaProps {
+  title: string;
+  description: string;
+  url?: string;
+  image?: string | number | null;
+}
+
+const HeadMeta = ({ title, description, url, image }: IMetaProps) => {
   return (
     <Head>
       <title>{title || 'Cobb.dev'}</title>

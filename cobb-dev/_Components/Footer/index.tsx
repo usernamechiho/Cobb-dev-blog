@@ -9,14 +9,14 @@ const Footer = () => {
       <div className={styles.left}>ⓒ Cobb reserves all rights.</div>
       <div className={styles.right}>
         <Tooltip title='Open Instagram'>
-          <a target='_blank' href='https://github.com/usernamechiho' rel='noopener noreferrer'>
+          <a target='_blank' href='https://www.instagram.com/sinsastation/' rel='noopener noreferrer'>
             <InstagramIcon />
           </a>
         </Tooltip>
         <Tooltip title='Open Github'>
           <a
             target='_blank'
-            href='https://www.instagram.com/sinsastation/'
+            href='https://github.com/usernamechiho'
             rel='noopener noreferrer'
             className={styles.github}
           >

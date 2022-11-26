@@ -4,8 +4,8 @@ import axios from 'axios';
 async function createSitemap() {
   const allPosts = await axios.get('https://cobb-dev-backend-u8nfg.ondigitalocean.app/api/articles');
 
-  const postUrls: any = allPosts.data.data.map(
-    (post: any) => `<url>
+  const postUrls = allPosts.data.data.map(
+    (post: { id: number; attributes: { title: string; }; }) => `<url>
                       <loc>http://cobb-dev.com/blog/${post.id}?title=${post.attributes.title}</loc>
                     </url>`
   );

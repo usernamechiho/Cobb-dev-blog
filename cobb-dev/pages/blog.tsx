@@ -1,10 +1,17 @@
 import Posts from '_Components/Posts';
 import axios from 'axios';
 import dayjs from 'dayjs';
-import { useEffect } from 'react';
+import { IMetaProps, IPostsDataProps } from 'Types/type';
 import styles from './blog.module.scss';
 
-function Blog({ posts }: any) {
+interface IPosts {
+  posts: {
+    data: IPostsDataProps[];
+    meta: IMetaProps;
+  };
+}
+
+function Blog({ posts }: IPosts) {
   const articles = posts.data;
 
   const today = dayjs().format('MMMM DD, YYYY');

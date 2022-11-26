@@ -1,5 +1,5 @@
 function Home() {
-  return <div>404 Err</div>;
+  return <div>Home.</div>;
 }
 
 export default Home;

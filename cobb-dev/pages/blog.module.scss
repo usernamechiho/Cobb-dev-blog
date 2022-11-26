@@ -13,6 +13,7 @@
   flex-direction: column;
   min-width: 350px;
   height: auto;
+  min-height: calc(100vh - 115px);
   overflow: scroll;
   background: color.$MAIN_WHITE;
 

@@ -147,7 +147,7 @@ const Footer = ()=>{
                         title: "Open Instagram",
                         children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
                             target: "_blank",
-                            href: "https://github.com/usernamechiho",
+                            href: "https://www.instagram.com/sinsastation/",
                             rel: "noopener noreferrer",
                             children: /*#__PURE__*/ jsx_runtime_.jsx((Instagram_default()), {})
                         })
@@ -156,7 +156,7 @@ const Footer = ()=>{
                         title: "Open Github",
                         children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
                             target: "_blank",
-                            href: "https://www.instagram.com/sinsastation/",
+                            href: "https://github.com/usernamechiho",
                             rel: "noopener noreferrer",
                             className: (footer_module_default()).github,
                             children: /*#__PURE__*/ jsx_runtime_.jsx((GitHub_default()), {})
@@ -215,7 +215,7 @@ const HeaderNav = ({ handleCloseMenu  })=>{
                         },
                         children: list.title
                     })
-                }))
+                }, list.path))
         })
     });
 };

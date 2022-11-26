@@ -1,9 +1,11 @@
 /* eslint-disable react/no-danger */
+import { GetStaticPaths, GetStaticProps } from 'next';
 import axios from 'axios';
 import { dateFormat } from '_Utils/Helper';
 import MarkdownRenderer from '_Components/MarkdownRenderer';
 import HeadMeta from '_Components/HeadMeta';
 import dynamic from 'next/dynamic';
+import { IPostsDataProps } from 'Types/type';
 import styles from './blog.module.scss';
 import 'github-markdown-css/github-markdown-light.css';
 
@@ -11,7 +13,21 @@ const Comment = dynamic(() => import('_Components/Comment'), {
   ssr: false,
 });
 
-const Article = ({ article }: any) => {
+interface IArticleProps {
+  article: {
+    data: IPostsDataProps;
+    meta: {};
+  };
+}
+
+interface ICtxProps {
+  params: {
+    params: string | number;
+    id: number;
+  };
+}
+
+const Article = ({ article }: IArticleProps) => {
   return (
     <>
       <HeadMeta
@@ -42,16 +58,16 @@ const Article = ({ article }: any) => {
 };
 
 export async function getStaticPaths() {
-  const articlePaths: any = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/articles/?populate[0]=*`);
+  const articlePaths = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/articles/?populate[0]=*`);
 
-  const paths = articlePaths.data.data.map((path: any) => ({
+  const paths = articlePaths.data.data.map((path: { id: string | number }) => ({
     params: { id: `${path.id}` },
   }));
 
   return { paths, fallback: false };
 }
 
-export async function getStaticProps(ctx: any) {
+export async function getStaticProps(ctx: ICtxProps) {
   const { params } = ctx;
   const { id } = params;
 

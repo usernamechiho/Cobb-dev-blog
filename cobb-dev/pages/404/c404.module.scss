@@ -1,0 +1,34 @@
+@use 'styles/_Global/color.scss';
+@use 'styles/_Global/flexbox.scss';
+@use 'styles/_Global/responsive.scss';
+
+@font-face {
+  font-family: sub-font;
+  src: url('../../public/fonts/Lora-Regular.ttf');
+  font-display: swap;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 115px);
+
+  @include responsive.after(MD) {
+    height: calc(100vh - 145px);
+  }
+
+  .content {
+    @include flexbox.flexbox(center, center);
+    flex-direction: column;
+    margin: auto;
+    font-family: sub-font, sans-serif;
+
+    p {
+      margin-top: 20px;
+    }
+
+    span {
+      font-size: 20px;
+    }
+  }
+}

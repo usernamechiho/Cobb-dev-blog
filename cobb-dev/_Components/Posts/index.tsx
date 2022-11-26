@@ -1,12 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { dateFormat } from '_Utils/Helper';
+import { IPostsDataProps } from 'Types/type';
 import styles from './posts.module.scss';
 
-const Posts = ({ articles }: any) => {
+interface IPosts {
+  articles: IPostsDataProps[];
+}
+
+const Posts = ({ articles }: IPosts) => {
+  const latestArticles = [...articles].reverse();
+
   return (
     <main className={styles.postContainer}>
-      {articles.map((article: any) => {
+      {latestArticles.map((article: IPostsDataProps) => {
         const src = `${process.env.NEXT_PUBLIC_BASE_URL}${article.attributes.thumbnail.data.attributes.url}`;
         const publishedDate = dateFormat(article.attributes.publishedAt);
         const { tag } = article.attributes.tag.data.attributes;
