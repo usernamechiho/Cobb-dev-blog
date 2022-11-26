@@ -2,12 +2,6 @@
 @use 'styles/_Global/flexbox.scss';
 @use 'styles/_Global/responsive.scss';
 
-@font-face {
-  font-family: bold-font;
-  src: url('../../public/fonts/Pretendard-Bold.ttf');
-  font-display: swap;
-}
-
 .postContainer {
   flex-direction: column;
   width: 100%;
@@ -73,15 +67,14 @@
     word-break: keep-all;
 
     h2 {
-      font-family: bold-font, sans-serif;
-      font-size: 1.2rem;
+      font-size: 16px;
       line-height: 30px;
       letter-spacing: 1px;
     }
 
     .subtitle {
       margin-top: 10px;
-      font-size: 0.9rem;
+      font-size: 13px;
       line-height: 22px;
       color: color.$MAIN_GRAY;
     }
