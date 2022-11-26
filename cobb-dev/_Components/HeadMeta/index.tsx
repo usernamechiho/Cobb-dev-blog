@@ -16,5 +16,3 @@ const HeadMeta = ({ title, description, url, image }: any) => {
 };
 
 export default HeadMeta;
-
-// http://localhost:1337/uploads/thumbnail_poster_7e2557163a.png

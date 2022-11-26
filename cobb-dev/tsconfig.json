@@ -9,7 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -21,7 +21,10 @@
     "**/*.ts",
     "**/*.tsx",
     "styles/_Global/index.js",
-    "_Components/MarkdownRenderer/index.js"
-, "_Components/Comment/index.ㅓㄴㅌ", "_Components/Comment/index.jsx", "_Components/Comment/index.js"  ],
-  "exclude": ["node_modules"]
+    "_Components/MarkdownRenderer/index.js",
+    "_Components/Comment/index.ㅓㄴㅌ",
+    "_Components/Comment/index.jsx",
+    "_Components/Comment/index.js"
+  ],
+  "exclude": ["node_modules"],
 }

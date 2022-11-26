@@ -1,6 +1,7 @@
 import Posts from '_Components/Posts';
 import axios from 'axios';
 import dayjs from 'dayjs';
+import { useEffect } from 'react';
 import styles from './blog.module.scss';
 
 function Blog({ posts }: any) {

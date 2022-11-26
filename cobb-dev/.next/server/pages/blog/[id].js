@@ -79,7 +79,7 @@ const HeadMeta = ({ title , description , url , image  })=>{
         ]
     });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeadMeta); // http://localhost:1337/uploads/thumbnail_poster_7e2557163a.png
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeadMeta);
 
 
 /***/ }),
