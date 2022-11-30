@@ -276,7 +276,8 @@ async function getStaticProps(ctx) {
     return {
         props: {
             article: article.data
-        }
+        },
+        revalidate: 10
     };
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Article);

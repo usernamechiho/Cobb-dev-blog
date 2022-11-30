@@ -77,6 +77,7 @@ export async function getStaticProps(ctx: ICtxProps) {
 
   return {
     props: { article: article.data },
+    revalidate: 10
   };
 }
 
