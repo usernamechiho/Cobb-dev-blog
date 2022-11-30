@@ -56,7 +56,9 @@ module.exports = {
 const Posts = ({ articles  })=>{
     const latestArticles = [
         ...articles
-    ].reverse();
+    ].sort((a, b)=>{
+        return b.id - a.id;
+    });
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("main", {
         className: (_posts_module_scss__WEBPACK_IMPORTED_MODULE_4___default().postContainer),
         children: latestArticles.map((article)=>{
@@ -187,7 +189,7 @@ async function getStaticProps() {
         props: {
             posts: posts.data
         },
-        revalidate: 10
+        revalidate: 60
     };
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Blog);

@@ -9,7 +9,9 @@ interface IPosts {
 }
 
 const Posts = ({ articles }: IPosts) => {
-  const latestArticles = [...articles].reverse();
+  const latestArticles = [...articles].sort((a, b) => {
+    return b.id - a.id;
+  });
 
   return (
     <main className={styles.postContainer}>

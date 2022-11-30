@@ -266,7 +266,7 @@ async function getStaticPaths() {
         }));
     return {
         paths,
-        fallback: false
+        fallback: "blocking"
     };
 }
 async function getStaticProps(ctx) {
@@ -277,7 +277,7 @@ async function getStaticProps(ctx) {
         props: {
             article: article.data
         },
-        revalidate: 10
+        revalidate: 60
     };
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Article);
