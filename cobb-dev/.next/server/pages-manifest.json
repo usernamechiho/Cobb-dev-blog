@@ -11,8 +11,8 @@
   "/owner-description": "pages/owner-description.html",
   "/send-email/EmailForm": "pages/send-email/EmailForm.html",
   "/send-email": "pages/send-email.html",
-  "/blog": "pages/blog.js",
-  "/blog/[id]": "pages/blog/[id].js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/blog": "pages/blog.js",
+  "/blog/[id]": "pages/blog/[id].js"
 }
