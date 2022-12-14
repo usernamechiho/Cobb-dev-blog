@@ -190,11 +190,15 @@ const Footer = ()=>{
 
 const NAV_ITEMS = [
     {
+        title: "# BLOG",
+        path: "/blog"
+    },
+    {
         title: "# COBB",
         path: "/owner-description"
     },
     {
-        title: "# BLOG",
+        title: "# ABOUT",
         path: "/blog-description"
     }, 
 ];

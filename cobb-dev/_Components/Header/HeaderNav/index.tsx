@@ -3,8 +3,9 @@ import { IHandleProps } from 'Types/type';
 import styles from './headerNav.module.scss';
 
 const NAV_ITEMS = [
+  { title: '# BLOG', path: '/blog' },
   { title: '# COBB', path: '/owner-description' },
-  { title: '# BLOG', path: '/blog-description' },
+  { title: '# ABOUT', path: '/blog-description' },
 ];
 
 const HeaderNav = ({ handleCloseMenu }: IHandleProps) => {

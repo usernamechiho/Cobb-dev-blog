@@ -8,7 +8,7 @@ const nextConfig = {
       {
         source: '/',
         destination: '/blog',
-        permanent: true,
+        permanent: false,
       },
     ];
   },
